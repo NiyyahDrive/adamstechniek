@@ -46,7 +46,22 @@ python3 -m http.server 8000
 - Socials linken nog naar `@manodakenbouw` (Facebook/TikTok/Marktplaats). Vervangen zodra rebrand op socials is doorgevoerd.
 - E-mailadres `info@adamstechniek.nl` is placeholder. Aanpassen naar werkelijk adres.
 - Domein in JSON-LD staat op `adamstechniek.nl` (zoals door eigenaar opgegeven). Bestaande site loopt op `adamsdaktechniek.nl` — controleren welk domein wordt gebruikt.
-- Foto's vervangen SVG-placeholders. 3–5 echte projectfoto's = directe kwaliteitsboost.
+- **Beelden:** alle scenes zijn inline SVG-illustraties (Nederlandse pannendak, plat dak met bitumen, dakkapel-profiel, zinkwerk-goot). Volledig onder controle, altijd snel laden, geen externe afhankelijkheden. Vervang door echte foto's zodra Adams er aanlevert: zoek de `<svg class="scene">`-blokken in `index.html` en vervang door `<img src="images/foto-1.jpg" alt="...">` met een `images/`-map naast het HTML-bestand.
+- **Reviews:** namen en steden zijn fictief maar realistisch. Vervangen door echte klantreviews zodra je toestemming hebt.
+- **Aggregate rating** in JSON-LD: 4.9 / 24 reviews — pas dit aan naar werkelijke aantallen zodra Google Business Profile gekoppeld is.
+
+## Features in deze versie
+
+- Hero met dakfoto-achtergrond + glasmorphism trust-card
+- Spoed-strook ("binnen 1 uur") onder hero
+- Trust-badges: 10 jaar garantie, VCA, A-merk, verzekerd
+- Donkere USP-strip met grote getallen
+- Projectfoto's met tag-overlay
+- Reviews met avatars + locatie
+- Zwevende WhatsApp-knop
+- Sticky bel-balk op mobiel
+- WhatsApp-link in contactblok
+- Responsive vanaf 320px tot full HD
 
 ## Wat je nog kunt toevoegen
 
