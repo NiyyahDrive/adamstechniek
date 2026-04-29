@@ -1,0 +1,213 @@
+<!--
+═══════════════════════════════════════════════════════════════════════
+  ADAMS DAKTECHNIEK — PAGE TEMPLATE
+  Bestandnaam start met _ → wordt door geen enkel ander script ingelezen.
+
+  HOE GEBRUIKEN:
+  1. Kopieer dit bestand naar pages/<nieuwe-naam>.html
+  2. Zoek-en-vervang elke {{PLACEHOLDER}} via Find & Replace
+  3. Zoek "<!-- HOOFDINHOUD -->" en plaats daar je page-specifieke content
+  4. Verwijder deze comment-block bovenaan
+  5. Zet `noindex` om naar `index, follow` zodra de page live mag
+
+  PLACEHOLDERS:
+    {{TITLE}}        → bv. "Veranda Reinigen Limburg | Adams Daktechniek"
+    {{DESCRIPTION}}  → max ~155 tekens, eindigt met CTA ("Offerte in 24u.")
+    {{SLUG}}         → bv. "verandareiniging" (bestandnaam zonder .html)
+    {{H1}}           → hoofdtitel op de page (vaak ~ titel zonder " | Adams")
+    {{SCHEMA_NAME}}  → service-naam voor JSON-LD (bv. "Verandareiniging")
+    {{SCHEMA_DESC}}  → korte service-beschrijving voor JSON-LD
+═══════════════════════════════════════════════════════════════════════
+-->
+<!DOCTYPE html>
+<html lang="nl" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <base href="https://adamstechniek.nl/pages/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ═══ FAVICONS (absoluut, ongeacht subfolder) ═══ -->
+    <link rel="icon" type="image/x-icon" href="https://adamstechniek.nl/assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://adamstechniek.nl/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://adamstechniek.nl/assets/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://adamstechniek.nl/assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="https://adamstechniek.nl/assets/favicons/site.webmanifest">
+
+    <!-- ═══ SEO BASIS — vervang per page ═══ -->
+    <title>{{TITLE}}</title>
+    <meta name="description" content="{{DESCRIPTION}}">
+    <meta name="theme-color" content="#0d47a1">
+    <link rel="canonical" href="https://adamstechniek.nl/pages/{{SLUG}}.html">
+
+    <!-- ZET OP "index, follow" zodra de page live mag — anders staat 'ie hierop -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- ═══ OPEN GRAPH / SOCIAL ═══ -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Adams Daktechniek">
+    <meta property="og:title" content="{{TITLE}}">
+    <meta property="og:description" content="{{DESCRIPTION}}">
+    <meta property="og:url" content="https://adamstechniek.nl/pages/{{SLUG}}.html">
+    <meta property="og:image" content="../assets/images-optimized/adamslogo_en.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{TITLE}}">
+    <meta name="twitter:description" content="{{DESCRIPTION}}">
+    <meta name="twitter:image" content="../assets/images-optimized/adamslogo_en.jpeg">
+
+    <!-- ═══ FONTS ═══ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ═══ GOOGLE ANALYTICS 4 ═══ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q11L7Z055S"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q11L7Z055S');</script>
+
+    <!-- ═══ STRUCTURED DATA (Service + Breadcrumb + FAQ) ═══ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "name": "{{SCHEMA_NAME}}",
+          "description": "{{SCHEMA_DESC}}",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://adamstechniek.nl/#business",
+            "name": "Adams Daktechniek",
+            "telephone": "+31683396082",
+            "url": "https://adamstechniek.nl/"
+          },
+          "areaServed": {"@type": "AdministrativeArea", "name": "Limburg — Antwerpen, Brasschaat (Vriesdonk), Schoten (Koningshof), Kapellen, Schilde, Mortsel, Edegem, Hove, Lint, Wilrijk, Boechout, Kontich, Lier, Keerbergen, Bonheiden, Mechelen, Turnhout, Hoogstraten, Geel, de Kempen, Waasland, Oost- en West-Limburg, Limburg en Vlaams-Brabant"}
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://adamstechniek.nl/"},
+            {"@type": "ListItem", "position": 2, "name": "{{H1}}"}
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- ═══ STYLESHEETS ═══ -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/header.css?v=7">
+    <link rel="stylesheet" href="../css/enhancements.css?v=20260429j">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Sla naar hoofdinhoud</a>
+
+    <!-- ═══════════ HEADER + NAV (DO NOT EDIT) ═══════════ -->
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="../" class="navbar-brand logo-button">
+                <img src="../assets/images-optimized/adamslogo_en.jpeg" alt="Adams Daktechniek - Professionele raam- en gevelreiniging" loading="eager">
+            </a>
+            <button class="hamburger" id="menuToggle" aria-label="Navigatiemenu openen" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navMenu">
+                <li class="nav-dropdown">
+                    <a href="../index.html#diensten">Diensten <span class="dropdown-arrow">&#9660;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ruitenwassen.html">Ruitenwassen</a></li>
+                        <li><a href="zonnepanelen-reinigen.html">Zonnepanelen reinigen</a></li>
+                        <li><a href="dakgoten-reinigen.html">Dakgoten reinigen</a></li>
+                        <li><a href="gevelreiniging.html">Gevelreiniging</a></li>
+                        <li><a href="dakontmossen.html">Dak ontmossen</a></li>
+                        <li><a href="terrasreiniging.html">Terrasreiniging</a></li>
+                        <li><a href="verandareiniging.html">Veranda reinigen</a></li>
+                        <li><a href="rolluiken-koepels.html">Rolluiken &amp; koepels</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#waarom">Waarom ons</a></li>
+                <li><a href="voor-syndici.html">Voor bedrijven</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li class="nav-highlight"><a href="onze-acties.html">Onze Acties <span class="floating-label">50% Korting</span></a></li>
+                <li><a href="realisaties.html">Realisaties</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="btn-nav">Gratis offerte</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ═══════════ HOOFDINHOUD — vervang dit blok per page ═══════════ -->
+    <main id="main">
+
+        <!-- HERO — pas tekst en achtergrondfoto aan via inline CSS of klassen -->
+        <section class="service-hero">
+            <span class="eyebrow">Eyebrow / categorie</span>
+            <h1>{{H1}}</h1>
+            <p class="sub">Subtitel — 1-2 zinnen die de service en geografie samenvatten.</p>
+            <div class="cta-row">
+                <a href="contact.html" class="btn btn-primary">Gratis offerte</a>
+                <a href="https://wa.me/31683396082?text=Hallo+Adams+Daktechniek+-+ik+wil+meer+info" class="btn btn-wa">WhatsApp</a>
+            </div>
+        </section>
+
+        <!-- VOEG HIER JE EIGEN SECTIES TOE: features, FAQ, prijzen, CTA, etc. -->
+
+    </main>
+
+    <!-- ═══════════ FOOTER (DO NOT EDIT) ═══════════ -->
+    <footer>
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <h3>ADAMS</h3>
+                <div class="tag">WINDOW CLEANING</div>
+                <p>Professionele ruitenwasser en totaalreiniging in Limburg. Osmose-technologie, vakmanschap, nuchterheid.</p>
+                <p class="footer__btw">BTW BE 0785.659.715</p>
+            </div>
+            <div class="footer__col">
+                <h4>Diensten</h4>
+                <ul>
+                    <li><a href="ruitenwassen.html">Ruitenwassen</a></li>
+                    <li><a href="zonnepanelen-reinigen.html">Zonnepanelen reinigen</a></li>
+                    <li><a href="dakgoten-reinigen.html">Dakgoten reinigen</a></li>
+                    <li><a href="gevelreiniging.html">Gevelreiniging</a></li>
+                    <li><a href="dakontmossen.html">Dak ontmossen</a></li>
+                    <li><a href="terrasreiniging.html">Terrasreiniging</a></li>
+                    <li><a href="verandareiniging.html">Veranda reinigen</a></li>
+                    <li><a href="rolluiken-koepels.html">Rolluiken &amp; koepels</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Bedrijf</h4>
+                <ul>
+                    <li><a href="over-ons.html">Over ons</a></li>
+                    <li><a href="realisaties.html">Realisaties</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="voor-syndici.html">Voor bedrijven</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+31683396082">06-83 33 96 082</a></li>
+                    <li><a href="https://wa.me/31683396082" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li><a href="mailto:info@adamstechniek.nl">info@adamstechniek.nl</a></li>
+                    <li>Ma–Za 8:00 – 20:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span>© 2026 Adams Daktechniek. Alle rechten voorbehouden.</span>
+            <span><a href="privacy.html">Privacybeleid</a> · <a href="terms.html">Algemene voorwaarden</a> · <a href="sitemap.html">Sitemap</a></span>
+        </div>
+    </footer>
+
+    <!-- ═══════════ MOBIEL FAB-BAR (optioneel — kopieer van een service-page indien gewenst) ═══════════ -->
+
+    <!-- ═══════════ SCRIPTS (DO NOT EDIT) ═══════════ -->
+    <script src="https://adamstechniek.nl/js/main.js?v=7"></script>
+    <script src="https://adamstechniek.nl/js/enhancements.js" defer></script>
+    <script src="https://adamstechniek.nl/js/events.js?v=20260429j" defer></script>
+</body>
+</html>

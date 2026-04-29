@@ -1,0 +1,123 @@
+# 4 Seasons Cleaning — Production .htaccess
+# Last update: 2026-04-29
+
+# Geen directory listing
+Options -Indexes
+
+# Default charset
+AddDefaultCharset UTF-8
+
+# ─── Bescherm gevoelige bestanden ───────────────────────────────────────────
+<IfModule mod_authz_core.c>
+    <FilesMatch "\.log$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+<FilesMatch "^\.|\.backup-|~$|\.bak$|\.old$|\.swp$">
+    Require all denied
+</FilesMatch>
+
+<Files "mail_config.php">
+    Require all denied
+</Files>
+
+<Files "composer.json">
+    Require all denied
+</Files>
+
+<Files "composer.lock">
+    Require all denied
+</Files>
+
+# Block toegang tot eventuele lib-folder met PHPMailer source
+RedirectMatch 403 ^/lib/.*$
+
+# ─── Force HTTPS + canonical zonder www ─────────────────────────────────────
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # HTTP → HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # www → non-www (canonical)
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+</IfModule>
+
+# ─── Compression ─────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript text/xml text/plain
+    AddOutputFilterByType DEFLATE application/javascript application/json application/xml application/rss+xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ─── Browser caching ─────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/avif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+</IfModule>
+
+# Cache-Control headers voor statische assets
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|webp|avif|svg|ico|gif)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+    <FilesMatch "\.(woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# ─── Security headers ────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+    Header set X-XSS-Protection "1; mode=block"
+
+    # HSTS — start met 300s (5 min) voor veilige rollout, na 1 week ophogen naar 31536000 + preload
+    Header always set Strict-Transport-Security "max-age=300"
+
+    Header set Cross-Origin-Opener-Policy "same-origin"
+
+    # Verwijder server signature
+    Header unset Server
+    Header unset X-Powered-By
+</IfModule>
+
+# ─── MIME types ──────────────────────────────────────────────────────────────
+<IfModule mod_mime.c>
+    AddType image/avif .avif
+    AddType image/webp .webp
+    AddType application/manifest+json .webmanifest
+    AddType font/woff2 .woff2
+</IfModule>
+
+# ─── Custom error pages ──────────────────────────────────────────────────────
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+ErrorDocument 500 /404.html

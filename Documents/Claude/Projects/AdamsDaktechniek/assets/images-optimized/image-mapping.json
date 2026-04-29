@@ -1,0 +1,1935 @@
+[
+  {
+    "filename": "Dakgoten-2.jpg",
+    "baseName": "Dakgoten-2",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Dakgoten-2-160w.jpg",
+        "webp": "Dakgoten-2-160w.webp",
+        "avif": "Dakgoten-2-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Dakgoten-2-280w.jpg",
+        "webp": "Dakgoten-2-280w.webp",
+        "avif": "Dakgoten-2-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Dakgoten-2-380w.jpg",
+        "webp": "Dakgoten-2-380w.webp",
+        "avif": "Dakgoten-2-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Dakgoten.jpg",
+    "baseName": "Dakgoten",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Dakgoten-160w.jpg",
+        "webp": "Dakgoten-160w.webp",
+        "avif": "Dakgoten-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Dakgoten-280w.jpg",
+        "webp": "Dakgoten-280w.webp",
+        "avif": "Dakgoten-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Dakgoten-380w.jpg",
+        "webp": "Dakgoten-380w.webp",
+        "avif": "Dakgoten-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Dakontmossing.jpeg",
+    "baseName": "Dakontmossing",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Dakontmossing-340w.jpg",
+        "webp": "Dakontmossing-340w.webp",
+        "avif": "Dakontmossing-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Dakontmossing-768w.jpg",
+        "webp": "Dakontmossing-768w.webp",
+        "avif": "Dakontmossing-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Dakontmossing-1440w.jpg",
+        "webp": "Dakontmossing-1440w.webp",
+        "avif": "Dakontmossing-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Gevelreiniging-1.jpeg",
+    "baseName": "Gevelreiniging-1",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Gevelreiniging-1-340w.jpg",
+        "webp": "Gevelreiniging-1-340w.webp",
+        "avif": "Gevelreiniging-1-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Gevelreiniging-1-768w.jpg",
+        "webp": "Gevelreiniging-1-768w.webp",
+        "avif": "Gevelreiniging-1-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Gevelreiniging-1-1440w.jpg",
+        "webp": "Gevelreiniging-1-1440w.webp",
+        "avif": "Gevelreiniging-1-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Gevelreiniging-Terras.jpeg",
+    "baseName": "Gevelreiniging-Terras",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Gevelreiniging-Terras-340w.jpg",
+        "webp": "Gevelreiniging-Terras-340w.webp",
+        "avif": "Gevelreiniging-Terras-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Gevelreiniging-Terras-768w.jpg",
+        "webp": "Gevelreiniging-Terras-768w.webp",
+        "avif": "Gevelreiniging-Terras-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Gevelreiniging-Terras-1440w.jpg",
+        "webp": "Gevelreiniging-Terras-1440w.webp",
+        "avif": "Gevelreiniging-Terras-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Gevels-1.jpg",
+    "baseName": "Gevels-1",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Gevels-1-160w.jpg",
+        "webp": "Gevels-1-160w.webp",
+        "avif": "Gevels-1-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Gevels-1-280w.jpg",
+        "webp": "Gevels-1-280w.webp",
+        "avif": "Gevels-1-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Gevels-1-380w.jpg",
+        "webp": "Gevels-1-380w.webp",
+        "avif": "Gevels-1-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Gevels-2.jpg",
+    "baseName": "Gevels-2",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Gevels-2-160w.jpg",
+        "webp": "Gevels-2-160w.webp",
+        "avif": "Gevels-2-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Gevels-2-280w.jpg",
+        "webp": "Gevels-2-280w.webp",
+        "avif": "Gevels-2-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Gevels-2-380w.jpg",
+        "webp": "Gevels-2-380w.webp",
+        "avif": "Gevels-2-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Gevels-Voetpaden.jpg",
+    "baseName": "Gevels-Voetpaden",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Gevels-Voetpaden-160w.jpg",
+        "webp": "Gevels-Voetpaden-160w.webp",
+        "avif": "Gevels-Voetpaden-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Gevels-Voetpaden-280w.jpg",
+        "webp": "Gevels-Voetpaden-280w.webp",
+        "avif": "Gevels-Voetpaden-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Gevels-Voetpaden-380w.jpg",
+        "webp": "Gevels-Voetpaden-380w.webp",
+        "avif": "Gevels-Voetpaden-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Gevels.jpg",
+    "baseName": "Gevels",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Gevels-160w.jpg",
+        "webp": "Gevels-160w.webp",
+        "avif": "Gevels-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Gevels-280w.jpg",
+        "webp": "Gevels-280w.webp",
+        "avif": "Gevels-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Gevels-380w.jpg",
+        "webp": "Gevels-380w.webp",
+        "avif": "Gevels-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Ruitenwassen-1.jpeg",
+    "baseName": "Ruitenwassen-1",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Ruitenwassen-1-340w.jpg",
+        "webp": "Ruitenwassen-1-340w.webp",
+        "avif": "Ruitenwassen-1-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Ruitenwassen-1-768w.jpg",
+        "webp": "Ruitenwassen-1-768w.webp",
+        "avif": "Ruitenwassen-1-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Ruitenwassen-1-1440w.jpg",
+        "webp": "Ruitenwassen-1-1440w.webp",
+        "avif": "Ruitenwassen-1-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Ruitenwassen-2.jpeg",
+    "baseName": "Ruitenwassen-2",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Ruitenwassen-2-340w.jpg",
+        "webp": "Ruitenwassen-2-340w.webp",
+        "avif": "Ruitenwassen-2-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Ruitenwassen-2-768w.jpg",
+        "webp": "Ruitenwassen-2-768w.webp",
+        "avif": "Ruitenwassen-2-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Ruitenwassen-2-1440w.jpg",
+        "webp": "Ruitenwassen-2-1440w.webp",
+        "avif": "Ruitenwassen-2-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Ruitenwassen-3.jpeg",
+    "baseName": "Ruitenwassen-3",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Ruitenwassen-3-340w.jpg",
+        "webp": "Ruitenwassen-3-340w.webp",
+        "avif": "Ruitenwassen-3-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Ruitenwassen-3-768w.jpg",
+        "webp": "Ruitenwassen-3-768w.webp",
+        "avif": "Ruitenwassen-3-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Ruitenwassen-3-1440w.jpg",
+        "webp": "Ruitenwassen-3-1440w.webp",
+        "avif": "Ruitenwassen-3-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Ruitenwassen-4.jpeg",
+    "baseName": "Ruitenwassen-4",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Ruitenwassen-4-340w.jpg",
+        "webp": "Ruitenwassen-4-340w.webp",
+        "avif": "Ruitenwassen-4-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Ruitenwassen-4-768w.jpg",
+        "webp": "Ruitenwassen-4-768w.webp",
+        "avif": "Ruitenwassen-4-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Ruitenwassen-4-1440w.jpg",
+        "webp": "Ruitenwassen-4-1440w.webp",
+        "avif": "Ruitenwassen-4-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Ruitenwassen-5.jpeg",
+    "baseName": "Ruitenwassen-5",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Ruitenwassen-5-340w.jpg",
+        "webp": "Ruitenwassen-5-340w.webp",
+        "avif": "Ruitenwassen-5-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Ruitenwassen-5-768w.jpg",
+        "webp": "Ruitenwassen-5-768w.webp",
+        "avif": "Ruitenwassen-5-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Ruitenwassen-5-1440w.jpg",
+        "webp": "Ruitenwassen-5-1440w.webp",
+        "avif": "Ruitenwassen-5-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Ruitenwassen.jpeg",
+    "baseName": "Ruitenwassen",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Ruitenwassen-340w.jpg",
+        "webp": "Ruitenwassen-340w.webp",
+        "avif": "Ruitenwassen-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Ruitenwassen-768w.jpg",
+        "webp": "Ruitenwassen-768w.webp",
+        "avif": "Ruitenwassen-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Ruitenwassen-1440w.jpg",
+        "webp": "Ruitenwassen-1440w.webp",
+        "avif": "Ruitenwassen-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Kantoorgebouw-1.jpeg",
+    "baseName": "Kantoorgebouw-1",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Kantoorgebouw-1-340w.jpg",
+        "webp": "Kantoorgebouw-1-340w.webp",
+        "avif": "Kantoorgebouw-1-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Kantoorgebouw-1-768w.jpg",
+        "webp": "Kantoorgebouw-1-768w.webp",
+        "avif": "Kantoorgebouw-1-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Kantoorgebouw-1-1440w.jpg",
+        "webp": "Kantoorgebouw-1-1440w.webp",
+        "avif": "Kantoorgebouw-1-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Kantoorgebouw-10.jpeg",
+    "baseName": "Kantoorgebouw-10",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Kantoorgebouw-10-340w.jpg",
+        "webp": "Kantoorgebouw-10-340w.webp",
+        "avif": "Kantoorgebouw-10-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Kantoorgebouw-10-768w.jpg",
+        "webp": "Kantoorgebouw-10-768w.webp",
+        "avif": "Kantoorgebouw-10-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Kantoorgebouw-10-1440w.jpg",
+        "webp": "Kantoorgebouw-10-1440w.webp",
+        "avif": "Kantoorgebouw-10-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Kantoorgebouw-2.jpeg",
+    "baseName": "Kantoorgebouw-2",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Kantoorgebouw-2-340w.jpg",
+        "webp": "Kantoorgebouw-2-340w.webp",
+        "avif": "Kantoorgebouw-2-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Kantoorgebouw-2-768w.jpg",
+        "webp": "Kantoorgebouw-2-768w.webp",
+        "avif": "Kantoorgebouw-2-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Kantoorgebouw-2-1440w.jpg",
+        "webp": "Kantoorgebouw-2-1440w.webp",
+        "avif": "Kantoorgebouw-2-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Kantoorgebouw-3.jpeg",
+    "baseName": "Kantoorgebouw-3",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Kantoorgebouw-3-340w.jpg",
+        "webp": "Kantoorgebouw-3-340w.webp",
+        "avif": "Kantoorgebouw-3-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Kantoorgebouw-3-768w.jpg",
+        "webp": "Kantoorgebouw-3-768w.webp",
+        "avif": "Kantoorgebouw-3-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Kantoorgebouw-3-1440w.jpg",
+        "webp": "Kantoorgebouw-3-1440w.webp",
+        "avif": "Kantoorgebouw-3-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Kantoorgebouw-4.jpeg",
+    "baseName": "Kantoorgebouw-4",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Kantoorgebouw-4-340w.jpg",
+        "webp": "Kantoorgebouw-4-340w.webp",
+        "avif": "Kantoorgebouw-4-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Kantoorgebouw-4-768w.jpg",
+        "webp": "Kantoorgebouw-4-768w.webp",
+        "avif": "Kantoorgebouw-4-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Kantoorgebouw-4-1440w.jpg",
+        "webp": "Kantoorgebouw-4-1440w.webp",
+        "avif": "Kantoorgebouw-4-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Kantoorgebouw-5.jpeg",
+    "baseName": "Kantoorgebouw-5",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Kantoorgebouw-5-340w.jpg",
+        "webp": "Kantoorgebouw-5-340w.webp",
+        "avif": "Kantoorgebouw-5-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Kantoorgebouw-5-768w.jpg",
+        "webp": "Kantoorgebouw-5-768w.webp",
+        "avif": "Kantoorgebouw-5-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Kantoorgebouw-5-1440w.jpg",
+        "webp": "Kantoorgebouw-5-1440w.webp",
+        "avif": "Kantoorgebouw-5-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Kantoorgebouw-6.jpeg",
+    "baseName": "Kantoorgebouw-6",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Kantoorgebouw-6-340w.jpg",
+        "webp": "Kantoorgebouw-6-340w.webp",
+        "avif": "Kantoorgebouw-6-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Kantoorgebouw-6-768w.jpg",
+        "webp": "Kantoorgebouw-6-768w.webp",
+        "avif": "Kantoorgebouw-6-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Kantoorgebouw-6-1440w.jpg",
+        "webp": "Kantoorgebouw-6-1440w.webp",
+        "avif": "Kantoorgebouw-6-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Kantoorgebouw-7.jpeg",
+    "baseName": "Kantoorgebouw-7",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Kantoorgebouw-7-340w.jpg",
+        "webp": "Kantoorgebouw-7-340w.webp",
+        "avif": "Kantoorgebouw-7-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Kantoorgebouw-7-768w.jpg",
+        "webp": "Kantoorgebouw-7-768w.webp",
+        "avif": "Kantoorgebouw-7-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Kantoorgebouw-7-1440w.jpg",
+        "webp": "Kantoorgebouw-7-1440w.webp",
+        "avif": "Kantoorgebouw-7-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Kantoorgebouw-8.jpeg",
+    "baseName": "Kantoorgebouw-8",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Kantoorgebouw-8-340w.jpg",
+        "webp": "Kantoorgebouw-8-340w.webp",
+        "avif": "Kantoorgebouw-8-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Kantoorgebouw-8-768w.jpg",
+        "webp": "Kantoorgebouw-8-768w.webp",
+        "avif": "Kantoorgebouw-8-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Kantoorgebouw-8-1440w.jpg",
+        "webp": "Kantoorgebouw-8-1440w.webp",
+        "avif": "Kantoorgebouw-8-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Kantoorgebouw-9.jpeg",
+    "baseName": "Kantoorgebouw-9",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Kantoorgebouw-9-340w.jpg",
+        "webp": "Kantoorgebouw-9-340w.webp",
+        "avif": "Kantoorgebouw-9-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Kantoorgebouw-9-768w.jpg",
+        "webp": "Kantoorgebouw-9-768w.webp",
+        "avif": "Kantoorgebouw-9-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Kantoorgebouw-9-1440w.jpg",
+        "webp": "Kantoorgebouw-9-1440w.webp",
+        "avif": "Kantoorgebouw-9-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepel-schoon.jpeg",
+    "baseName": "Koepel-schoon",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepel-schoon-340w.jpg",
+        "webp": "Koepel-schoon-340w.webp",
+        "avif": "Koepel-schoon-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepel-schoon-768w.jpg",
+        "webp": "Koepel-schoon-768w.webp",
+        "avif": "Koepel-schoon-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepel-schoon-1440w.jpg",
+        "webp": "Koepel-schoon-1440w.webp",
+        "avif": "Koepel-schoon-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepel-vies.jpeg",
+    "baseName": "Koepel-vies",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepel-vies-340w.jpg",
+        "webp": "Koepel-vies-340w.webp",
+        "avif": "Koepel-vies-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepel-vies-768w.jpg",
+        "webp": "Koepel-vies-768w.webp",
+        "avif": "Koepel-vies-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepel-vies-1440w.jpg",
+        "webp": "Koepel-vies-1440w.webp",
+        "avif": "Koepel-vies-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepel-voor-1.jpeg",
+    "baseName": "Koepel-voor-1",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepel-voor-1-340w.jpg",
+        "webp": "Koepel-voor-1-340w.webp",
+        "avif": "Koepel-voor-1-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepel-voor-1-768w.jpg",
+        "webp": "Koepel-voor-1-768w.webp",
+        "avif": "Koepel-voor-1-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepel-voor-1-1440w.jpg",
+        "webp": "Koepel-voor-1-1440w.webp",
+        "avif": "Koepel-voor-1-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-1.jpeg",
+    "baseName": "Koepels-1",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-1-340w.jpg",
+        "webp": "Koepels-1-340w.webp",
+        "avif": "Koepels-1-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-1-768w.jpg",
+        "webp": "Koepels-1-768w.webp",
+        "avif": "Koepels-1-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-1-1440w.jpg",
+        "webp": "Koepels-1-1440w.webp",
+        "avif": "Koepels-1-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-1.jpg",
+    "baseName": "Koepels-1",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-1-340w.jpg",
+        "webp": "Koepels-1-340w.webp",
+        "avif": "Koepels-1-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-1-768w.jpg",
+        "webp": "Koepels-1-768w.webp",
+        "avif": "Koepels-1-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-1-1440w.jpg",
+        "webp": "Koepels-1-1440w.webp",
+        "avif": "Koepels-1-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-2.jpeg",
+    "baseName": "Koepels-2",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-2-340w.jpg",
+        "webp": "Koepels-2-340w.webp",
+        "avif": "Koepels-2-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-2-768w.jpg",
+        "webp": "Koepels-2-768w.webp",
+        "avif": "Koepels-2-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-2-1440w.jpg",
+        "webp": "Koepels-2-1440w.webp",
+        "avif": "Koepels-2-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-3.jpeg",
+    "baseName": "Koepels-3",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-3-340w.jpg",
+        "webp": "Koepels-3-340w.webp",
+        "avif": "Koepels-3-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-3-768w.jpg",
+        "webp": "Koepels-3-768w.webp",
+        "avif": "Koepels-3-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-3-1440w.jpg",
+        "webp": "Koepels-3-1440w.webp",
+        "avif": "Koepels-3-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-3.jpg",
+    "baseName": "Koepels-3",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-3-340w.jpg",
+        "webp": "Koepels-3-340w.webp",
+        "avif": "Koepels-3-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-3-768w.jpg",
+        "webp": "Koepels-3-768w.webp",
+        "avif": "Koepels-3-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-3-1440w.jpg",
+        "webp": "Koepels-3-1440w.webp",
+        "avif": "Koepels-3-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-4.jpeg",
+    "baseName": "Koepels-4",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-4-340w.jpg",
+        "webp": "Koepels-4-340w.webp",
+        "avif": "Koepels-4-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-4-768w.jpg",
+        "webp": "Koepels-4-768w.webp",
+        "avif": "Koepels-4-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-4-1440w.jpg",
+        "webp": "Koepels-4-1440w.webp",
+        "avif": "Koepels-4-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-4.jpg",
+    "baseName": "Koepels-4",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-4-340w.jpg",
+        "webp": "Koepels-4-340w.webp",
+        "avif": "Koepels-4-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-4-768w.jpg",
+        "webp": "Koepels-4-768w.webp",
+        "avif": "Koepels-4-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-4-1440w.jpg",
+        "webp": "Koepels-4-1440w.webp",
+        "avif": "Koepels-4-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-5.jpeg",
+    "baseName": "Koepels-5",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-5-340w.jpg",
+        "webp": "Koepels-5-340w.webp",
+        "avif": "Koepels-5-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-5-768w.jpg",
+        "webp": "Koepels-5-768w.webp",
+        "avif": "Koepels-5-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-5-1440w.jpg",
+        "webp": "Koepels-5-1440w.webp",
+        "avif": "Koepels-5-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-6.jpeg",
+    "baseName": "Koepels-6",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-6-340w.jpg",
+        "webp": "Koepels-6-340w.webp",
+        "avif": "Koepels-6-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-6-768w.jpg",
+        "webp": "Koepels-6-768w.webp",
+        "avif": "Koepels-6-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-6-1440w.jpg",
+        "webp": "Koepels-6-1440w.webp",
+        "avif": "Koepels-6-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-8.jpeg",
+    "baseName": "Koepels-8",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-8-340w.jpg",
+        "webp": "Koepels-8-340w.webp",
+        "avif": "Koepels-8-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-8-768w.jpg",
+        "webp": "Koepels-8-768w.webp",
+        "avif": "Koepels-8-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-8-1440w.jpg",
+        "webp": "Koepels-8-1440w.webp",
+        "avif": "Koepels-8-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-na.jpeg",
+    "baseName": "Koepels-na",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-na-340w.jpg",
+        "webp": "Koepels-na-340w.webp",
+        "avif": "Koepels-na-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-na-768w.jpg",
+        "webp": "Koepels-na-768w.webp",
+        "avif": "Koepels-na-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-na-1440w.jpg",
+        "webp": "Koepels-na-1440w.webp",
+        "avif": "Koepels-na-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels-voor.jpeg",
+    "baseName": "Koepels-voor",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-voor-340w.jpg",
+        "webp": "Koepels-voor-340w.webp",
+        "avif": "Koepels-voor-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-voor-768w.jpg",
+        "webp": "Koepels-voor-768w.webp",
+        "avif": "Koepels-voor-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-voor-1440w.jpg",
+        "webp": "Koepels-voor-1440w.webp",
+        "avif": "Koepels-voor-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Koepels.jpg",
+    "baseName": "Koepels",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Koepels-340w.jpg",
+        "webp": "Koepels-340w.webp",
+        "avif": "Koepels-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Koepels-768w.jpg",
+        "webp": "Koepels-768w.webp",
+        "avif": "Koepels-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Koepels-1440w.jpg",
+        "webp": "Koepels-1440w.webp",
+        "avif": "Koepels-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Nabil-2.jpg",
+    "baseName": "Nabil-2",
+    "type": "team",
+    "variants": [
+      {
+        "width": 280,
+        "jpg": "Nabil-2-280w.jpg",
+        "webp": "Nabil-2-280w.webp",
+        "avif": "Nabil-2-280w.avif"
+      },
+      {
+        "width": 350,
+        "jpg": "Nabil-2-350w.jpg",
+        "webp": "Nabil-2-350w.webp",
+        "avif": "Nabil-2-350w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Nabil-profiel-1.jpeg",
+    "baseName": "Nabil-profiel-1",
+    "type": "team",
+    "variants": [
+      {
+        "width": 280,
+        "jpg": "Nabil-profiel-1-280w.jpg",
+        "webp": "Nabil-profiel-1-280w.webp",
+        "avif": "Nabil-profiel-1-280w.avif"
+      },
+      {
+        "width": 350,
+        "jpg": "Nabil-profiel-1-350w.jpg",
+        "webp": "Nabil-profiel-1-350w.webp",
+        "avif": "Nabil-profiel-1-350w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Nabil-team.jpg",
+    "baseName": "Nabil-team",
+    "type": "team",
+    "variants": [
+      {
+        "width": 280,
+        "jpg": "Nabil-team-280w.jpg",
+        "webp": "Nabil-team-280w.webp",
+        "avif": "Nabil-team-280w.avif"
+      },
+      {
+        "width": 350,
+        "jpg": "Nabil-team-350w.jpg",
+        "webp": "Nabil-team-350w.webp",
+        "avif": "Nabil-team-350w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Nabil-working.jpg",
+    "baseName": "Nabil-working",
+    "type": "team",
+    "variants": [
+      {
+        "width": 280,
+        "jpg": "Nabil-working-280w.jpg",
+        "webp": "Nabil-working-280w.webp",
+        "avif": "Nabil-working-280w.avif"
+      },
+      {
+        "width": 350,
+        "jpg": "Nabil-working-350w.jpg",
+        "webp": "Nabil-working-350w.webp",
+        "avif": "Nabil-working-350w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "NabilBuildingClimb.jpeg",
+    "baseName": "NabilBuildingClimb",
+    "type": "team",
+    "variants": [
+      {
+        "width": 280,
+        "jpg": "NabilBuildingClimb-280w.jpg",
+        "webp": "NabilBuildingClimb-280w.webp",
+        "avif": "NabilBuildingClimb-280w.avif"
+      },
+      {
+        "width": 350,
+        "jpg": "NabilBuildingClimb-350w.jpg",
+        "webp": "NabilBuildingClimb-350w.webp",
+        "avif": "NabilBuildingClimb-350w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "NabilHomePage copy.jpeg",
+    "baseName": "NabilHomePage copy",
+    "type": "team",
+    "variants": [
+      {
+        "width": 280,
+        "jpg": "NabilHomePage copy-280w.jpg",
+        "webp": "NabilHomePage copy-280w.webp",
+        "avif": "NabilHomePage copy-280w.avif"
+      },
+      {
+        "width": 350,
+        "jpg": "NabilHomePage copy-350w.jpg",
+        "webp": "NabilHomePage copy-350w.webp",
+        "avif": "NabilHomePage copy-350w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "NabilProfile.jpeg",
+    "baseName": "NabilProfile",
+    "type": "team",
+    "variants": [
+      {
+        "width": 280,
+        "jpg": "NabilProfile-280w.jpg",
+        "webp": "NabilProfile-280w.webp",
+        "avif": "NabilProfile-280w.avif"
+      },
+      {
+        "width": 350,
+        "jpg": "NabilProfile-350w.jpg",
+        "webp": "NabilProfile-350w.webp",
+        "avif": "NabilProfile-350w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "PoolCover-Aerial.jpg",
+    "baseName": "PoolCover-Aerial",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "PoolCover-Aerial-340w.jpg",
+        "webp": "PoolCover-Aerial-340w.webp",
+        "avif": "PoolCover-Aerial-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "PoolCover-Aerial-768w.jpg",
+        "webp": "PoolCover-Aerial-768w.webp",
+        "avif": "PoolCover-Aerial-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "PoolCover-Aerial-1440w.jpg",
+        "webp": "PoolCover-Aerial-1440w.webp",
+        "avif": "PoolCover-Aerial-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Rolluiken.jpeg",
+    "baseName": "Rolluiken",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "Rolluiken-340w.jpg",
+        "webp": "Rolluiken-340w.webp",
+        "avif": "Rolluiken-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "Rolluiken-768w.jpg",
+        "webp": "Rolluiken-768w.webp",
+        "avif": "Rolluiken-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "Rolluiken-1440w.jpg",
+        "webp": "Rolluiken-1440w.webp",
+        "avif": "Rolluiken-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2024-05-06-at-11.37.51.jpeg",
+    "baseName": "WhatsApp-Image-2024-05-06-at-11.37.51",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2024-05-06-at-11.37.51-160w.jpg",
+        "webp": "WhatsApp-Image-2024-05-06-at-11.37.51-160w.webp",
+        "avif": "WhatsApp-Image-2024-05-06-at-11.37.51-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2024-05-06-at-11.37.51-280w.jpg",
+        "webp": "WhatsApp-Image-2024-05-06-at-11.37.51-280w.webp",
+        "avif": "WhatsApp-Image-2024-05-06-at-11.37.51-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2024-05-06-at-11.37.51-380w.jpg",
+        "webp": "WhatsApp-Image-2024-05-06-at-11.37.51-380w.webp",
+        "avif": "WhatsApp-Image-2024-05-06-at-11.37.51-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2024-05-06-at-11.37.52-1.jpeg",
+    "baseName": "WhatsApp-Image-2024-05-06-at-11.37.52-1",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2024-05-06-at-11.37.52-1-160w.jpg",
+        "webp": "WhatsApp-Image-2024-05-06-at-11.37.52-1-160w.webp",
+        "avif": "WhatsApp-Image-2024-05-06-at-11.37.52-1-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2024-05-06-at-11.37.52-1-280w.jpg",
+        "webp": "WhatsApp-Image-2024-05-06-at-11.37.52-1-280w.webp",
+        "avif": "WhatsApp-Image-2024-05-06-at-11.37.52-1-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2024-05-06-at-11.37.52-1-380w.jpg",
+        "webp": "WhatsApp-Image-2024-05-06-at-11.37.52-1-380w.webp",
+        "avif": "WhatsApp-Image-2024-05-06-at-11.37.52-1-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM10-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM12-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM13-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM14-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM15-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM16-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM2-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM4-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM5-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM6-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM7-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM8-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.17-PM9-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.18-PM.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.18-PM",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1).jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1 (1)-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM1-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2.jpeg",
+    "baseName": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2-160w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2-160w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2-280w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2-280w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2-380w.jpg",
+        "webp": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2-380w.webp",
+        "avif": "WhatsApp-Image-2025-07-25-at-4.51.18-PM2-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Zonnepanelen-1.jpeg",
+    "baseName": "Zonnepanelen-1",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Zonnepanelen-1-160w.jpg",
+        "webp": "Zonnepanelen-1-160w.webp",
+        "avif": "Zonnepanelen-1-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Zonnepanelen-1-280w.jpg",
+        "webp": "Zonnepanelen-1-280w.webp",
+        "avif": "Zonnepanelen-1-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Zonnepanelen-1-380w.jpg",
+        "webp": "Zonnepanelen-1-380w.webp",
+        "avif": "Zonnepanelen-1-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Zonnepanelen-2.jpeg",
+    "baseName": "Zonnepanelen-2",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Zonnepanelen-2-160w.jpg",
+        "webp": "Zonnepanelen-2-160w.webp",
+        "avif": "Zonnepanelen-2-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Zonnepanelen-2-280w.jpg",
+        "webp": "Zonnepanelen-2-280w.webp",
+        "avif": "Zonnepanelen-2-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Zonnepanelen-2-380w.jpg",
+        "webp": "Zonnepanelen-2-380w.webp",
+        "avif": "Zonnepanelen-2-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Zonnepanelen-2.jpg",
+    "baseName": "Zonnepanelen-2",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Zonnepanelen-2-160w.jpg",
+        "webp": "Zonnepanelen-2-160w.webp",
+        "avif": "Zonnepanelen-2-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Zonnepanelen-2-280w.jpg",
+        "webp": "Zonnepanelen-2-280w.webp",
+        "avif": "Zonnepanelen-2-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Zonnepanelen-2-380w.jpg",
+        "webp": "Zonnepanelen-2-380w.webp",
+        "avif": "Zonnepanelen-2-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Zonnepanelen-3.jpeg",
+    "baseName": "Zonnepanelen-3",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Zonnepanelen-3-160w.jpg",
+        "webp": "Zonnepanelen-3-160w.webp",
+        "avif": "Zonnepanelen-3-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Zonnepanelen-3-280w.jpg",
+        "webp": "Zonnepanelen-3-280w.webp",
+        "avif": "Zonnepanelen-3-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Zonnepanelen-3-380w.jpg",
+        "webp": "Zonnepanelen-3-380w.webp",
+        "avif": "Zonnepanelen-3-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Zonnepanelen-3.jpg",
+    "baseName": "Zonnepanelen-3",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Zonnepanelen-3-160w.jpg",
+        "webp": "Zonnepanelen-3-160w.webp",
+        "avif": "Zonnepanelen-3-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Zonnepanelen-3-280w.jpg",
+        "webp": "Zonnepanelen-3-280w.webp",
+        "avif": "Zonnepanelen-3-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Zonnepanelen-3-380w.jpg",
+        "webp": "Zonnepanelen-3-380w.webp",
+        "avif": "Zonnepanelen-3-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Zonnepanelen-4.jpeg",
+    "baseName": "Zonnepanelen-4",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Zonnepanelen-4-160w.jpg",
+        "webp": "Zonnepanelen-4-160w.webp",
+        "avif": "Zonnepanelen-4-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Zonnepanelen-4-280w.jpg",
+        "webp": "Zonnepanelen-4-280w.webp",
+        "avif": "Zonnepanelen-4-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Zonnepanelen-4-380w.jpg",
+        "webp": "Zonnepanelen-4-380w.webp",
+        "avif": "Zonnepanelen-4-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Zonnepanelen-4.jpg",
+    "baseName": "Zonnepanelen-4",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Zonnepanelen-4-160w.jpg",
+        "webp": "Zonnepanelen-4-160w.webp",
+        "avif": "Zonnepanelen-4-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Zonnepanelen-4-280w.jpg",
+        "webp": "Zonnepanelen-4-280w.webp",
+        "avif": "Zonnepanelen-4-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Zonnepanelen-4-380w.jpg",
+        "webp": "Zonnepanelen-4-380w.webp",
+        "avif": "Zonnepanelen-4-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "Zonnepanelen.jpg",
+    "baseName": "Zonnepanelen",
+    "type": "gallery",
+    "variants": [
+      {
+        "width": 160,
+        "jpg": "Zonnepanelen-160w.jpg",
+        "webp": "Zonnepanelen-160w.webp",
+        "avif": "Zonnepanelen-160w.avif"
+      },
+      {
+        "width": 280,
+        "jpg": "Zonnepanelen-280w.jpg",
+        "webp": "Zonnepanelen-280w.webp",
+        "avif": "Zonnepanelen-280w.avif"
+      },
+      {
+        "width": 380,
+        "jpg": "Zonnepanelen-380w.jpg",
+        "webp": "Zonnepanelen-380w.webp",
+        "avif": "Zonnepanelen-380w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "logo-white.png",
+    "baseName": "logo-white",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "logo-white-340w.jpg",
+        "webp": "logo-white-340w.webp",
+        "avif": "logo-white-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "logo-white-768w.jpg",
+        "webp": "logo-white-768w.webp",
+        "avif": "logo-white-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "logo-white-1440w.jpg",
+        "webp": "logo-white-1440w.webp",
+        "avif": "logo-white-1440w.avif"
+      }
+    ]
+  },
+  {
+    "filename": "logo.png",
+    "baseName": "logo",
+    "type": "default",
+    "variants": [
+      {
+        "width": 340,
+        "jpg": "logo-340w.jpg",
+        "webp": "logo-340w.webp",
+        "avif": "logo-340w.avif"
+      },
+      {
+        "width": 768,
+        "jpg": "logo-768w.jpg",
+        "webp": "logo-768w.webp",
+        "avif": "logo-768w.avif"
+      },
+      {
+        "width": 1440,
+        "jpg": "logo-1440w.jpg",
+        "webp": "logo-1440w.webp",
+        "avif": "logo-1440w.avif"
+      }
+    ]
+  }
+]

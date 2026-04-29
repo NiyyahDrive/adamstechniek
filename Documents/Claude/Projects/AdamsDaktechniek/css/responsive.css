@@ -1,0 +1,278 @@
+/* ================================================
+   RESPONSIVE DESIGN
+   Mobile-first approach with breakpoints
+   ================================================ */
+
+/* ================================================
+   LOGO RESPONSIVE SIZING - MOVED TO css/header.css
+   ================================================
+   Logo sizing is now handled in header.css.
+   See header.css for complete responsive logo styles.
+   ================================================ */
+
+/* ================================================
+   TABLET: 768px
+   ================================================ */
+
+@media (max-width: 1024px) {
+    .service-main {
+        grid-template-columns: 1fr;
+    }
+
+    .service-sidebar {
+        position: static;
+        grid-column: 1;
+    }
+
+    .hero,
+    .service-hero,
+    .story .container,
+    .contact-grid,
+    .b2b-teaser {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .service-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-ctas,
+    .contact-cta-buttons {
+        flex-direction: column;
+    }
+
+    .hero-ctas .btn,
+    .contact-cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu {
+        gap: var(--space-md);
+    }
+
+    /* Responsive nav structure */
+    nav {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+}
+
+/* ================================================
+   MOBILE: 640px
+   ================================================ */
+
+@media (max-width: 768px) {
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .services-grid,
+    .trust-grid,
+    .why-grid,
+    .process-steps,
+    .values-grid,
+    .team-grid,
+    .faq-grid,
+    .quality-items {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card,
+    .trust-item,
+    .why-item,
+    .value-card,
+    .team-member,
+    .quality-item,
+    .faq-box {
+        text-align: center;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .process-steps {
+        gap: var(--space-md);
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .social-buttons,
+    .hero-ctas,
+    .contact-cta-buttons {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .story-content blockquote {
+        padding: var(--space-md);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .why-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact specific */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+
+    /* B2B Teaser */
+    .b2b-teaser {
+        gap: var(--space-lg);
+    }
+
+    /* About page */
+    .story .container {
+        grid-template-columns: 1fr;
+    }
+
+/* ================================================
+   SMALL MOBILE: 480px
+   ================================================ */
+
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 var(--space-sm);
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .service-card,
+    .trust-item,
+    .value-card,
+    .faq-box {
+        padding: var(--space-md);
+    }
+
+    .contact-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .team-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .contact-section {
+        padding: var(--space-lg) var(--space-sm);
+    }
+
+    /* Legal pages */
+    .legal-content {
+        padding: var(--space-lg) var(--space-sm);
+    }
+
+    .legal-body h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+
+@media print {
+    .header,
+    .footer,
+    .breadcrumb,
+    .contact-cta,
+    .nav-menu {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    a {
+        text-decoration: underline;
+        color: black;
+    }
+
+    .service-card,
+    .trust-item,
+    .value-card,
+    .faq-box {
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+    }
+}
+
+/* ================================================
+   ACCESSIBILITY
+   ================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Optional dark mode support */
+    /* Implement if needed */
+}

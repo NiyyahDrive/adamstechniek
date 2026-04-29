@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="nl" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <base href="https://adamstechniek.nl/pages/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://adamstechniek.nl/assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://adamstechniek.nl/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://adamstechniek.nl/assets/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://adamstechniek.nl/assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="https://adamstechniek.nl/assets/favicons/site.webmanifest">
+    <title>Bedankt voor uw aanvraag — Adams Daktechniek</title>
+    <meta name="description" content="Uw aanvraag is ontvangen. We nemen binnen 24 uur contact met u op.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://adamstechniek.nl/pages/bedankt.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Adams Daktechniek">
+    <meta property="og:title" content="Bedankt voor uw aanvraag — Adams Daktechniek">
+    <meta property="og:description" content="Uw aanvraag is ontvangen. We nemen binnen 24 uur contact met u op.">
+    <meta property="og:url" content="https://adamstechniek.nl/pages/bedankt.html">
+    <meta property="og:image" content="../assets/images-optimized/adamslogo_en.jpeg">
+<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css?v=7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q11L7Z055S"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Q11L7Z055S');</script>
+
+    <style>
+        /* ── Bedankt-pagina eigen stijlen ── */
+        .bedankt-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(11,61,145,0.92), rgba(26,115,232,0.85)),
+                        url('../assets/images-optimized/Ruitenwassen-1440w.webp') center/cover no-repeat;
+            padding: 40px 20px;
+        }
+
+        .bedankt-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+            padding: 56px 48px;
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .bedankt-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #0b3d91, #1a73e8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+        }
+
+        .bedankt-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .bedankt-card h1 {
+            font-size: 28px;
+            color: #0b3d91;
+            margin: 0 0 12px;
+            font-weight: 700;
+        }
+
+        .bedankt-card .subtitle {
+            font-size: 17px;
+            color: #555;
+            margin: 0 0 32px;
+            line-height: 1.6;
+        }
+
+        .bedankt-card .subtitle strong {
+            color: #0b3d91;
+        }
+
+        .stappen {
+            background: #f0f6ff;
+            border-radius: 10px;
+            padding: 24px 28px;
+            margin: 0 0 32px;
+            text-align: left;
+        }
+
+        .stappen h2 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: #1a73e8;
+            margin: 0 0 16px;
+        }
+
+        .stap {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .stap:last-child { margin-bottom: 0; }
+
+        .stap-nr {
+            min-width: 28px;
+            height: 28px;
+            background: #1a73e8;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stap-tekst {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.5;
+            padding-top: 4px;
+        }
+
+        .bedankt-acties {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-bedankt {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #0b3d91, #1a73e8);
+            color: #fff;
+            text-decoration: none;
+            padding: 13px 26px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: opacity .2s;
+        }
+
+        .btn-primary-bedankt:hover { opacity: .88; }
+
+        .btn-secondary-bedankt {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            color: #0b3d91;
+            border: 2px solid #0b3d91;
+            text-decoration: none;
+            padding: 11px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background .2s, color .2s;
+        }
+
+        .btn-secondary-bedankt:hover {
+            background: #0b3d91;
+            color: #fff;
+        }
+
+        .bedankt-contact-bar {
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid #e8e8e8;
+            font-size: 13px;
+            color: #888;
+        }
+
+        .bedankt-contact-bar a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 560px) {
+            .bedankt-card { padding: 36px 24px; }
+            .bedankt-card h1 { font-size: 22px; }
+        }
+    
+        /* ── Nav highlight (Onze Acties) ── */
+        .nav-highlight a { position:relative; font-weight:600; color:#fff !important; background:#F26B1F; padding:.5rem 1rem; border-radius:6px; text-decoration:none; }
+        .floating-label { position:absolute; top:-14px; right:-28px; background:#F26B1F; color:#fff; font-size:.6rem; font-weight:700; padding:.25rem .5rem; border-radius:10px; white-space:nowrap; }
+    
+        /* ── Diensten dropdown ── */
+        .nav-dropdown { position:relative; }
+        .nav-dropdown > a { display:flex; align-items:center; gap:.3rem; }
+        .dropdown-arrow { font-size:.65rem; transition:transform .2s; display:inline-block; }
+        .dropdown-menu { display:none; position:absolute; top:calc(100% + 8px); left:0; background:#fff; border:1px solid #e2e8f0; border-radius:10px; box-shadow:0 8px 28px rgba(15,23,42,.13); min-width:230px; z-index:300; padding:.5rem 0; list-style:none; }
+        .nav-dropdown:hover > .dropdown-menu,
+        .nav-dropdown.open > .dropdown-menu { display:block; }
+        .nav-dropdown:hover .dropdown-arrow,
+        .nav-dropdown.open .dropdown-arrow { transform:rotate(180deg); }
+        .dropdown-menu li { list-style:none; }
+        .dropdown-menu a { display:block; padding:.65rem 1.25rem; color:#334155 !important; font-size:.9rem; font-weight:500; white-space:nowrap; text-decoration:none; background:transparent !important; transition:background .15s,color .15s; }
+        .dropdown-menu a:hover { background:#f0f6ff !important; color:#0d47a1 !important; }
+        @media(max-width:900px){
+            .nav-dropdown .dropdown-menu { position:static; box-shadow:none; border:none; border-top:1px solid #e2e8f0; border-radius:0; background:#f8fafc; min-width:unset; padding:.25rem 0 .25rem 1rem; }
+        }
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 0;
+            right: 0;
+            height: 8px;
+        }
+    
+    /* ===== MOBILE FAB BAR ===== */
+    .mob-fab-bar {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        .mob-fab-bar {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #0d1b2a;
+            border-top: 2px solid rgba(255,255,255,.1);
+            box-shadow: 0 -4px 20px rgba(0,0,0,.3);
+        }
+        .mob-fab {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: .45rem .2rem .4rem;
+            text-decoration: none;
+            font-size: .62rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: center;
+            transition: opacity .15s;
+            border-right: 1px solid rgba(255,255,255,.08);
+            min-height: 58px;
+        }
+        .mob-fab:last-child { border-right: none; }
+        .mob-fab:active { opacity: .75; }
+        .mob-fab__icon { font-size: 1.3rem; margin-bottom: .15rem; display: block; }
+        .mob-fab__label { color: #fff; }
+        .mob-fab--offerte { background: #e65c00; }
+        .mob-fab--bel     { background: #0d47a1; }
+        .mob-fab--wa      { background: #25D366; }
+        .mob-fab--actie   { background: #b71c1c; }
+        /* Hide old sticky bar and floating WA button on mobile */
+        .sticky-call-bar  { display: none !important; }
+        .float-wa         { display: none !important; }
+        /* Hide hero CTA buttons on mobile */
+        .hero-cta-group   { display: none !important; }
+        .service-hero .cta-row { display: none !important; }
+        /* Floating WA button verbergen op mobiel */
+        a[href*="wa.me"][style*="position:fixed"] { display: none !important; }
+        /* Add bottom padding so content isn't hidden behind bar */
+        body { padding-bottom: 72px !important; }
+    }
+    </style>
+    <link rel="stylesheet" href="../css/enhancements.css?v=20260429j">
+
+</head>
+<body>
+    <a href="#main" class="skip-link">Sla naar hoofdinhoud</a>
+
+
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="../index.html" class="navbar-brand logo-button">
+                <img src="../assets/images-optimized/adamslogo_en.jpeg" alt="Adams Daktechniek — Ruitenwasser Limburg" loading="eager" style="height:48px;width:auto;">
+            </a>
+            <button class="hamburger" id="menuToggle" aria-label="Menu openen" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navMenu">
+                <li class="nav-dropdown">
+                    <a href="../index.html#diensten">Diensten <span class="dropdown-arrow">&#9660;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ruitenwassen.html">Ruitenwassen</a></li>
+                        <li><a href="zonnepanelen-reinigen.html">Zonnepanelen reinigen</a></li>
+                        <li><a href="dakgoten-reinigen.html">Dakgoten reinigen</a></li>
+                        <li><a href="gevelreiniging.html">Gevelreiniging</a></li>
+                        <li><a href="dakontmossen.html">Dak ontmossen</a></li>
+                        <li><a href="terrasreiniging.html">Terrasreiniging</a></li>
+                        <li><a href="verandareiniging.html">Veranda reinigen</a></li>
+                        <li><a href="rolluiken-koepels.html">Rolluiken &amp; koepels</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#waarom">Waarom ons</a></li>
+                <li><a href="voor-syndici.html">Voor bedrijven</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li class="nav-highlight"><a href="onze-acties.html">Onze Acties <span class="floating-label">50% Korting</span></a></li>
+                <li><a href="realisaties.html">Realisaties</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="btn-nav">Gratis offerte</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ── Hoofd content ── -->
+    <main id="main">
+        <section class="bedankt-hero">
+            <div class="bedankt-card">
+
+                <!-- Vinkje icoon -->
+                <div class="bedankt-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+
+                <h1>Aanvraag ontvangen!</h1>
+                <p class="subtitle">
+                    Bedankt voor uw vertrouwen in <strong>Adams Daktechniek</strong>.<br>
+                    We nemen <strong>binnen 24 uur</strong> contact met u op voor een vrijblijvende offerte.
+                </p>
+
+                <!-- Wat er nu gebeurt -->
+                <div class="stappen">
+                    <h2>Wat gebeurt er nu?</h2>
+                    <div class="stap">
+                        <span class="stap-nr">1</span>
+                        <p class="stap-tekst">U ontvangt direct een bevestigingsmail op het opgegeven e-mailadres.</p>
+                    </div>
+                    <div class="stap">
+                        <span class="stap-nr">2</span>
+                        <p class="stap-tekst">Ons team bekijkt uw aanvraag en stelt een offerte op maat op.</p>
+                    </div>
+                    <div class="stap">
+                        <span class="stap-nr">3</span>
+                        <p class="stap-tekst">We bellen of mailen u — binnen 24 uur op werkdagen.</p>
+                    </div>
+                </div>
+
+                <!-- Knoppen -->
+                <div class="bedankt-acties">
+                    <a href="../index.html" class="btn-primary-bedankt">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        Terug naar home
+                    </a>
+                    <a href="tel:+31683396082" class="btn-secondary-bedankt">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.5 2.18l3-.01a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l1.28-1.29a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Direct bellen
+                    </a>
+                </div>
+
+                <div class="bedankt-contact-bar">
+                    Dringende vraag? Mail ons op <a href="mailto:info@adamstechniek.nl">info@adamstechniek.nl</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <h3>ADAMS</h3>
+                <div class="tag">WINDOW CLEANING</div>
+                <p>Professionele ruitenwasser en totaalreiniging in Limburg. Osmose-technologie, vakmanschap, nuchterheid.</p>
+                <p class="footer__btw">BTW BE 0785.659.715</p>
+            </div>
+            <div class="footer__col">
+                <h4>Diensten</h4>
+                <ul>
+                    <li><a href="ruitenwassen.html">Ruitenwassen</a></li>
+                    <li><a href="zonnepanelen-reinigen.html">Zonnepanelen reinigen</a></li>
+                    <li><a href="dakgoten-reinigen.html">Dakgoten reinigen</a></li>
+                    <li><a href="gevelreiniging.html">Gevelreiniging</a></li>
+                    <li><a href="dakontmossen.html">Dak ontmossen</a></li>
+                    <li><a href="terrasreiniging.html">Terrasreiniging</a></li>
+                    <li><a href="verandareiniging.html">Veranda reinigen</a></li>
+                    <li><a href="rolluiken-koepels.html">Rolluiken &amp; koepels</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Bedrijf</h4>
+                <ul>
+                    <li><a href="over-ons.html">Over ons</a></li>
+                    <li><a href="realisaties.html">Realisaties</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="voor-syndici.html">Voor bedrijven</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+31683396082">06-83 33 96 082</a></li>
+                    <li><a href="https://wa.me/31683396082" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li><a href="mailto:info@adamstechniek.nl">info@adamstechniek.nl</a></li>
+                    <li>Ma–Za 8:00 – 20:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span>© 2026 Adams Daktechniek. Alle rechten voorbehouden.</span>
+            <span><a href="privacy.html">Privacybeleid</a> · <a href="terms.html">Algemene voorwaarden</a> · <a href="sitemap.html">Sitemap</a></span>
+        </div>
+    </footer>
+
+    <div class="sticky-call-bar"><a href="tel:+31683396082">📞 Bel nu: 06-83 33 96 082 — Gratis offerte</a></div>
+    <a href="https://wa.me/31683396082?text=Hallo+Adams+Daktechniek+-+ik+heb+zojuist+een+aanvraag+ingediend" target="_blank" rel="noopener" style="position:fixed;bottom:90px;right:1.25rem;width:56px;height:56px;background:#25D366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:89;text-decoration:none;" title="WhatsApp">💬</a>
+    <script src="https://adamstechniek.nl/js/main.js?v=20260429c"></script>
+    <script>
+        document.getElementById('jaar').textContent = new Date().getFullYear();
+        document.addEventListener('DOMContentLoaded',function(){var t=document.getElementById('menuToggle'),m=document.getElementById('navMenu');if(t&&m)t.addEventListener('click',function(){var e=t.getAttribute('aria-expanded')==='true';t.setAttribute('aria-expanded',!e);m.classList.toggle('is-open');});});
+    </script>
+
+
+    <!-- MOBILE FAB BAR -->
+    <div class="mob-fab-bar" id="mobFabBar">
+        <a href="contact.html" class="mob-fab mob-fab--offerte">
+            <span class="mob-fab__icon">📋</span>
+            <span class="mob-fab__label">Offerte</span>
+        </a>
+        <a href="tel:+31683396082" class="mob-fab mob-fab--bel">
+            <span class="mob-fab__icon">📞</span>
+            <span class="mob-fab__label">Bellen</span>
+        </a>
+        <a href="https://wa.me/31683396082?text=Hallo+Adams+Daktechniek+-+ik+heb+zojuist+een+aanvraag+ingediend" target="_blank" rel="noopener" class="mob-fab mob-fab--wa">
+            <span class="mob-fab__icon">💬</span>
+            <span class="mob-fab__label">WhatsApp</span>
+        </a>
+    </div>
+<script>
+(function() {
+    document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
+        var t;
+        dd.addEventListener('mouseenter', function() {
+            clearTimeout(t);
+            if (window.matchMedia('(hover: hover)').matches) {
+                dd.classList.add('open');
+            }
+        });
+        dd.addEventListener('mouseleave', function() {
+            t = setTimeout(function() { dd.classList.remove('open'); }, 200);
+        });
+        var link = dd.querySelector(':scope > a');
+        if (link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    dd.classList.toggle('open');
+                }
+            });
+        }
+    });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-dropdown')) {
+            document.querySelectorAll('.nav-dropdown.open').forEach(function(dd) {
+                dd.classList.remove('open');
+            });
+        }
+    });
+})();
+</script>
+    <script src="https://adamstechniek.nl/js/enhancements.js" defer></script>
+    <script src="https://adamstechniek.nl/js/events.js?v=20260429j" defer></script>
+
+</body>
+</html>

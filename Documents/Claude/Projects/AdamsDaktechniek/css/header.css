@@ -1,0 +1,524 @@
+/* ================================================
+   4 SEASONS - RESPONSIVE HEADER (Mobile-First)
+   Professional, Consistent, Accessible Design
+   ================================================ */
+
+/* iOS Rubber-Band Scroll Fix */
+html, body {
+    background-color: #ffffff;   /* voorkomt doorschijn bij rubber-band scroll iOS */
+    color-scheme: light;         /* blokkeert Chrome Force Dark Mode voor hele pagina */
+}
+
+/* CSS Variables for Header Consistency Across All Pages */
+:root {
+    /* Header Dimensions */
+    --header-height: 75px;
+    --header-height-tablet: 80px;
+    --header-height-desktop: 85px;
+    
+    /* Colors - Navy Blue Branding - WCAG AA Compliant */
+    --header-bg: #ffffff;
+    --header-border: #e5e7eb;
+    --header-text: #000000;
+    --header-text-hover: #0E2A4A;
+    --button-primary: #0E2A4A;
+    --button-primary-hover: #15375F;
+    --button-primary-active: #0A1F3A;
+    
+    /* Typography */
+    --header-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --header-font-size: 15px;
+    --header-font-size-tablet: 15px;
+    --header-font-size-desktop: 16px;
+    --header-font-weight: 500;
+    --header-font-weight-bold: 600;
+    
+    /* Spacing */
+    --header-padding-x: 1rem;
+    --header-padding-x-tablet: 1.5rem;
+    --header-padding-x-desktop: 2rem;
+    --header-gap: 1rem;
+    --header-gap-desktop: 2rem;
+    
+    /* Effects */
+    --header-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --header-shadow-active: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --header-backdrop: saturate(180%) blur(12px);
+    
+    /* Animation */
+    --header-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ================================================
+   BASE HEADER STYLES (MOBILE-FIRST)
+   ================================================ */
+
+.nav {
+    position: -webkit-sticky;    /* Safari-prefix */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff !important;          /* FORCE white on ALL devices */
+    color-scheme: light;                     /* Opt out of browser Force Dark Mode */
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    height: 75px;
+    min-height: 75px;
+}
+
+.nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--header-padding-x);
+    height: 100%;
+    gap: var(--header-gap);
+    
+    /* Ensure proper vertical centering on all devices */
+    min-height: var(--header-height);
+}
+
+/* ================================================
+   LOGO BUTTON - Robust, Protected Container
+   Master CSS: Overrides ALL global picture/img rules
+   Strategy: flex container with width:auto + overflow:visible
+   ================================================ */
+
+.navbar-brand.logo-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 12px !important;
+    border-radius: 5px !important;
+    cursor: pointer !important;
+    width: auto !important;                    /* Dwing width af op basis van logo */
+    max-width: none !important;                /* Geen verborgen restricties */
+    background-color: transparent !important;  /* Transparante knop op witte header */
+    overflow: visible !important;              /* Laat niets afsnijden */
+    border: none !important;                   /* Geen button borders */
+    text-decoration: none !important;
+    flex-shrink: 0;                            /* Niet krimpen in flex container */
+    order: -1;                                 /* Logo eerste element */
+    line-height: 0;                            /* Verwijder baseline spacing */
+}
+
+/* Logo afbeelding binnen de knop */
+.navbar-brand.logo-button img {
+    height: 54px !important;                   /* Mobile (75px header) */
+    width: auto !important;                    /* Schaal automatisch */
+    max-width: 280px !important;               /* Ruimte voor volledige tekst op desktop */
+    max-height: none !important;
+    object-fit: contain !important;
+    display: block !important;
+    border: none !important;
+}
+/* ================================================
+   NAVIGATION LINKS (MOBILE - HIDDEN BY DEFAULT)
+   ================================================ */
+
+.nav-links {
+    /* Hidden on mobile */
+    display: none;
+    list-style: none;
+    align-items: center;
+    gap: var(--header-gap);
+    margin: 0;
+    padding: 0;
+    color-scheme: light;                     /* Opt out of browser Force Dark Mode */
+}
+
+.nav-links a,
+.nav-links a:link,
+.nav-links a:visited {
+    color: #000000;
+    text-decoration: none;
+    font-size: var(--header-font-size);
+    font-weight: var(--header-font-weight);
+    transition: var(--header-transition);
+    padding: 0.5rem 0;
+    user-select: none;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--header-text-hover);
+    outline: 2px solid var(--header-text-hover);
+    outline-offset: 2px;
+}
+
+/* ================================================
+   BUTTON STYLING (Offerte)
+   ================================================ */
+
+.btn-nav {
+    background-color: var(--button-primary);
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: var(--header-font-weight-bold);
+    font-size: var(--header-font-size);
+    transition: var(--header-transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(13, 71, 161, 0.15);
+}
+
+.btn-nav:hover,
+.btn-nav:focus {
+    background-color: var(--button-primary-hover);
+    box-shadow: 0 4px 12px rgba(13, 71, 161, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-nav:active {
+    background-color: var(--button-primary-active);
+    transform: translateY(0);
+}
+
+.btn-nav:focus {
+    outline: 2px solid var(--button-primary-hover);
+    outline-offset: 2px;
+}
+
+/* ================================================
+   BUTTON SPECIFICITY - Override .nav-links a styles
+   High-specificity selector ensures button appearance
+   ================================================ */
+
+.nav-links a.btn-nav,
+.nav-links a.btn-nav:link,
+.nav-links a.btn-nav:visited {
+    color: #ffffff;
+    background-color: #0E2A4A;
+    -webkit-text-fill-color: #ffffff !important;  /* iOS Safari quirk: KEEP */
+}
+
+.nav-links a.btn-nav:hover,
+.nav-links a.btn-nav:focus {
+    background-color: #15375F;
+    color: #ffffff;
+}
+
+.nav-links a.btn-nav:active {
+    background-color: #0A1F3A;
+    color: #ffffff;
+}
+
+/* ================================================
+   HAMBURGER MENU (MOBILE)
+   ================================================ */
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 28px;
+    height: 20px;
+    background: none !important;  /* KEEP: utility class pattern */
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+    z-index: 1001;
+    min-width: 48px;
+    min-height: 48px;
+    position: relative;
+}
+
+.hamburger:focus {
+    outline: 2px solid var(--header-text-hover);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #000000;  /* removed !important: direct element style is specific enough */
+    border-radius: 2px;
+    transition: var(--header-transition);
+    transform-origin: center center;
+}
+
+/* Hamburger Animation - Active State */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8.75px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8.75px) rotate(-45deg);
+}
+
+
+
+/* ================================================
+   MOBILE MENU DROPDOWN (HIDDEN BY DEFAULT)
+   ================================================ */
+
+@media (max-width: 767px) {
+    /* Mobile menu overlay - slides down from header */
+    .nav-links {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        
+        /* Force white background on all mobile browsers */
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        
+        border-bottom: 1px solid var(--header-border);
+        padding: 0;
+        max-height: calc(100vh - var(--header-height));
+        overflow-y: auto;
+        
+        /* Hidden by default */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        pointer-events: none;
+        
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        
+        box-shadow: var(--header-shadow-active);
+    }
+    
+    /* Show mobile menu when active */
+    .nav-links.active {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+    
+    /* Mobile menu items */
+    .nav-links li {
+        border-bottom: 1px solid var(--header-border);
+        margin: 0;
+    }
+    
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 15px var(--header-padding-x);
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .nav-links a:active {
+        background-color: #f3f4f6;
+    }
+    
+    /* Button in mobile menu */
+    .nav-links .btn-nav {
+        color: #ffffff;  /* removed !important: specificity via .nav-links .btn-nav */
+        background-color: var(--button-primary);
+        margin: 0.75rem var(--header-padding-x);
+        padding: 0.75rem 1.5rem;
+        width: calc(100% - 2rem);
+        text-align: center;
+    }
+}
+
+/* ================================================
+   TABLET BREAKPOINT (768px - 1023px)
+   ================================================ */
+
+@media (min-width: 768px) {
+    :root {
+        --header-height: var(--header-height-tablet);
+        --header-padding-x: var(--header-padding-x-tablet);
+        --header-font-size: var(--header-font-size-tablet);
+    }
+    
+    .nav-links {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    /* Tablet: Show essential links + button */
+    .nav-links {
+        flex: 1;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+    
+    .navbar-brand.logo-button {
+        flex: 0 0 auto !important;
+        order: -1;
+        width: auto !important;
+        min-width: 0;
+    }
+
+    .navbar-brand.logo-button img {
+        height: 60px !important;   /* Tablet (80px header): ~60px logo */
+        width: auto !important;
+        max-width: 320px !important;
+        object-fit: contain !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --header-height: var(--header-height-desktop);
+        --header-padding-x: var(--header-padding-x-desktop);
+        --header-font-size: var(--header-font-size-desktop);
+    }
+    
+    .nav__inner {
+        gap: var(--header-gap-desktop);
+    }
+    
+    .navbar-brand.logo-button {
+        flex: 0 0 auto !important;
+        order: -1;
+        width: auto !important;
+        min-width: 0;
+    }
+
+    .navbar-brand.logo-button img {
+        height: 65px !important;   /* Desktop (85px header): ~65px logo */
+        width: auto !important;
+        max-width: 360px !important;
+        object-fit: contain !important;
+    }
+
+    /* Desktop: Full navigation */
+    .nav-links {
+        gap: var(--header-gap-desktop);
+        flex: 1;
+        justify-content: center;
+        margin-left: auto;
+    }
+    
+    /* Perfect spacing: Logo - Nav Links - Button */
+    .nav-links a {
+        position: relative;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    /* Underline hover effect for desktop */
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--header-text-hover);
+        transition: width 0.3s ease;
+    }
+    
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+    
+    /* Button gets focus before links */
+    .btn-nav {
+        order: 10;
+    }
+}
+
+/* ================================================
+   ACCESSIBILITY & PRINT
+   ================================================ */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .nav,
+    .nav-links,
+    .logo img,
+    .hamburger span,
+    .btn-nav,
+    .nav-links a::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .nav {
+        position: static;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
+
+/* ================================================
+   HIGH CONTRAST MODE SUPPORT
+   ================================================ */
+
+@media (prefers-contrast: more) {
+    .nav {
+        border-bottom: 2px solid var(--header-text);
+    }
+    
+    .nav-links a {
+        font-weight: var(--header-font-weight-bold);
+    }
+    
+    .btn-nav {
+        border: 2px solid transparent;
+    }
+}
+
+/* ================================================
+   DARK MODE SUPPORT (Optional)
+   ================================================ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --header-border: #e5e7eb;
+        --header-text: #000000;
+        --header-text-hover: #0E2A4A;
+        --button-primary: #0E2A4A;
+        --button-primary-hover: #15375F;
+    }
+
+    .nav {
+        background: #ffffff !important;
+    }
+
+    .nav-links {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+    }
+
+    .hamburger span {
+        background-color: #000000;
+    }
+}

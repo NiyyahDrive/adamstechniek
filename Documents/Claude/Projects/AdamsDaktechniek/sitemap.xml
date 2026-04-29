@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- ═════════ HOMEPAGE ═════════ -->
+    <url><loc>https://adamstechniek.nl/</loc><lastmod>2026-04-29</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+    <!-- ═════════ COMMERCIËLE TOP-PAGES ═════════ -->
+    <url><loc>https://adamstechniek.nl/pages/onze-acties.html</loc><lastmod>2026-04-29</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/contact.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/voor-syndici.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+    <!-- ═════════ SERVICE-PAGES ═════════ -->
+    <url><loc>https://adamstechniek.nl/pages/ruitenwassen.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/gevelreiniging.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/gevelreiniging-antwerpen.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/dakgoten-reinigen.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/dakontmossen.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/zonnepanelen-reinigen.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/terrasreiniging.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/verandareiniging.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/rolluiken-koepels.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+    <!-- ═════════ STADSPAGES — DE GOUDEN RAND ═════════ -->
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-antwerpen.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-brasschaat.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-vriesdonk.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-schoten.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-koningshof.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-schilde.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-kapellen.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-mortsel.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-edegem.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-hove.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-lint.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-boechout.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-kontich.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-wilrijk.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-lier.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-keerbergen.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-bonheiden.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+    <!-- ═════════ STADSPAGES — KEMPEN ═════════ -->
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-hoogstraten.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-geel.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+    <!-- ═════════ STADSPAGES — VLAANDEREN BREED ═════════ -->
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-mechelen.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-turnhout.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-leuven.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-gent.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-brugge.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/ruitenwasser-sint-niklaas.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+    <!-- ═════════ INFO-PAGES ═════════ -->
+    <url><loc>https://adamstechniek.nl/pages/over-ons.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/realisaties.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/reviews.html</loc><lastmod>2026-04-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+    <!-- ═════════ LEGAL ═════════ -->
+    <url><loc>https://adamstechniek.nl/pages/privacy.html</loc><lastmod>2026-04-29</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+    <url><loc>https://adamstechniek.nl/pages/terms.html</loc><lastmod>2026-04-29</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+</urlset>

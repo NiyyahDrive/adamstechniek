@@ -1,0 +1,814 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Adams Daktechniek — UX & Accessibility Enhancements (v1)
+   Wordt na style.css/responsive.css/header.css ingeladen.
+   Non-invasief: enkel verfijning, geen overrides van bestaande layout.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* 1. Smooth scrolling + offset onder sticky header */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* compenseert sticky header bij anchor-jumps */
+}
+
+/* 2. Respecteer reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 3. Verbeterde keyboard focus (a11y) */
+:focus-visible {
+    outline: 3px solid #15375F;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+button:focus-visible,
+a.btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-solid:focus-visible,
+.btn-nav:focus-visible {
+    outline: 3px solid #ffd54f;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px rgba(255, 213, 79, 0.25);
+}
+
+/* 4. Skip-to-content link (verschijnt enkel bij focus) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #15375F;
+    color: #fff;
+    padding: .65rem 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 9999;
+    border-radius: 0 0 6px 0;
+    transform: translateY(-100%);
+    transition: transform .2s ease;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+    transform: translateY(0);
+    top: 0;
+    outline: 3px solid #ffd54f;
+}
+
+/* 5. Subtiele hover-lift op interactieve cards (alleen waar bestaand patroon
+   reeds een transition heeft) */
+.service-card,
+.realisaties-card,
+.review-card,
+.portfolio-item {
+    transition: transform .25s ease, box-shadow .25s ease;
+    will-change: transform;
+}
+.service-card:hover,
+.realisaties-card:hover,
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(10, 79, 143, 0.12);
+}
+
+/* 6. Image fade-in zodra geladen (smoother LCP-ervaring) */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+img[loading="lazy"].is-loaded,
+img[loading="lazy"]:is([src*="favicon"]) {
+    opacity: 1;
+}
+/* fallback: als JS niet draait, toon meteen */
+.no-js img[loading="lazy"] { opacity: 1; }
+
+/* 7. Mobile safe-area voor floating CTA (iPhone notch / home-indicator) */
+.mob-fab,
+.floating-button,
+[class*="floating-cta"] {
+    padding-bottom: max(.75rem, env(safe-area-inset-bottom));
+}
+
+/* 8. Form polish: zichtbare invalid state na blur, niet tijdens typen */
+input:not([type="submit"]):not([type="button"]):user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+    border-color: #d93025;
+    box-shadow: 0 0 0 3px rgba(217, 48, 37, 0.12);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #15375F;
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.18);
+    outline: none;
+}
+
+/* 9. CTA micro-interactie (active feedback op tap/click) */
+a.btn,
+.btn-primary,
+.btn-solid,
+.btn-nav,
+button {
+    transition: transform .12s ease, box-shadow .2s ease, background-color .2s ease;
+}
+a.btn:active,
+.btn-primary:active,
+.btn-solid:active,
+.btn-nav:active,
+button:active {
+    transform: translateY(1px) scale(0.99);
+}
+
+/* 10. Lightbox/portfolio cursor hint */
+.portfolio-item {
+    cursor: zoom-in;
+}
+
+/* 11. Print stylesheet (compactere print versie) */
+@media print {
+    header, footer, .floating-button, .mob-fab,
+    [class*="cta"], [class*="floating"] {
+        display: none !important;
+    }
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.85em;
+        color: #666;
+    }
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        font-size: 11pt;
+    }
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    h1, h2, h3 { page-break-after: avoid; }
+}
+
+/* 12. Hardware-accelerated scrolling op iOS */
+body {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* 13. Verbeterde selection-stijl (consistent met merk) */
+::selection {
+    background: rgba(26, 115, 232, 0.25);
+    color: #0A1F3A;
+}
+
+/* 14. Tabular numbers voor prijzen / cijfers (consistente uitlijning) */
+.price, .stat, [data-num] {
+    font-variant-numeric: tabular-nums;
+}
+
+/* 15. Image-rendering hint voor scherpe iconen op high-DPI */
+img.icon, .icon img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   16. HEADER POLISH — eleganter, ademruimte, subtieler highlights
+   Override-niveau: enhancements.css laadt na header.css, dus wint op gelijke
+   specificiteit. Voor enkele elementen gebruiken we extra specificiteit.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* — Header zelf: subtieler shadow, glassy bij scroll — */
+.nav {
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
+    transition: box-shadow .25s ease, background-color .25s ease;
+}
+body.is-scrolled .nav {
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+    background: rgba(255, 255, 255, 0.92) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+
+/* — Nav-items: geen wrap, ademruimte, tighter type — */
+.nav-links {
+    gap: clamp(.65rem, 1.4vw, 1.4rem) !important;
+}
+.nav-links > li {
+    white-space: nowrap;
+}
+.nav-links a,
+.nav-links a:link,
+.nav-links a:visited {
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    padding: 0.55rem 0.25rem !important;
+    position: relative;
+    color: #0F1722;
+}
+
+/* Vervang harde outline-hover door subtiele underline — */
+.nav-links a:hover,
+.nav-links a:focus {
+    outline: none !important;
+    color: #0E2A4A;
+}
+.nav-links > li:not(.nav-highlight):not(.nav-dropdown) > a::after,
+.nav-links > .nav-dropdown > a::after {
+    content: "";
+    position: absolute;
+    left: 0.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .22s cubic-bezier(.4,0,.2,1);
+    border-radius: 2px;
+}
+.nav-links > li:not(.nav-highlight):not(.nav-dropdown) > a:hover::after,
+.nav-links > li:not(.nav-highlight):not(.nav-dropdown) > a:focus-visible::after,
+.nav-links > .nav-dropdown:hover > a::after,
+.nav-links > .nav-dropdown.open > a::after {
+    transform: scaleX(1);
+}
+
+/* — Onze Acties pill: subtieler, 50%-badge inline en kleiner — */
+.nav-links .nav-highlight a {
+    background: linear-gradient(135deg, #F26B1F, #FF8A3D) !important;
+    color: #fff !important;
+    padding: 0.45rem 0.95rem !important;
+    border-radius: 999px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem;
+    letter-spacing: -0.01em;
+    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.22);
+    transition: transform .18s ease, box-shadow .22s ease, filter .2s ease;
+    animation: none !important;
+    overflow: visible;
+}
+.nav-links .nav-highlight a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(255, 107, 53, 0.32);
+    filter: brightness(1.04);
+    color: #fff !important;
+}
+.nav-links .nav-highlight a::after { display: none !important; }
+
+/* 50% korting badge: kleiner, subtieler, top-right zonder "uit-header springen" */
+.nav-links .nav-highlight .floating-label {
+    position: absolute !important;
+    top: -8px !important;
+    right: -10px !important;
+    background: #b91c1c !important;
+    color: #fff !important;
+    font-size: 0.58rem !important;
+    font-weight: 700 !important;
+    padding: 2px 7px !important;
+    border-radius: 999px !important;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    box-shadow: 0 2px 6px rgba(185, 28, 28, 0.35);
+    border: 2px solid #fff;
+    white-space: nowrap;
+    animation: floatLabelPulse 2.4s ease-in-out infinite;
+}
+@keyframes floatLabelPulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.06); }
+}
+
+/* — CTA "Gratis offerte": pill-shape, gradient, betere shadow — */
+.nav-links a.btn-nav,
+.nav-links a.btn-nav:link,
+.nav-links a.btn-nav:visited {
+    background: linear-gradient(135deg, #0E2A4A, #15375F) !important;
+    color: #ffffff !important;
+    padding: 0.6rem 1.25rem !important;
+    border-radius: 999px !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.005em;
+    box-shadow: 0 2px 10px rgba(13, 71, 161, 0.22);
+    transition: transform .18s ease, box-shadow .22s ease, filter .2s ease;
+}
+.nav-links a.btn-nav:hover,
+.nav-links a.btn-nav:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(13, 71, 161, 0.32);
+    filter: brightness(1.05);
+}
+.nav-links a.btn-nav::after { display: none !important; }
+
+/* — Dropdown base-mechaniek (werkt op elke pagina, ook zonder inline CSS) — */
+.nav-links .nav-dropdown {
+    position: relative;
+}
+.nav-links .nav-dropdown > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+.nav-links .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 0.35rem);
+    left: 0;
+    list-style: none;
+    background: #fff;
+    min-width: 230px;
+    z-index: 300;
+    margin: 0;
+}
+.nav-links .nav-dropdown:hover > .dropdown-menu,
+.nav-links .nav-dropdown:focus-within > .dropdown-menu,
+.nav-links .nav-dropdown.open > .dropdown-menu {
+    display: block;
+}
+.nav-links .dropdown-menu li {
+    list-style: none;
+}
+/* Onzichtbare hover-buffer zodat de cursor van trigger naar menu kan zonder te sluiten */
+.nav-links .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+@media (max-width: 900px) {
+    .nav-links .nav-dropdown > .dropdown-menu {
+        position: static;
+        box-shadow: none !important;
+        border: none !important;
+        border-top: 1px solid #e2e8f0 !important;
+        border-radius: 0 !important;
+        background: #f8fafc;
+        min-width: unset;
+        padding: 0.25rem 0 0.25rem 1rem !important;
+        margin-top: 0.25rem;
+    }
+}
+
+/* — Diensten dropdown chevron: kleiner en gracieuzer — */
+.nav-links .dropdown-arrow {
+    font-size: 0.55rem !important;
+    margin-left: 0.15rem;
+    opacity: 0.65;
+    transition: transform .22s cubic-bezier(.4,0,.2,1), opacity .2s ease;
+}
+.nav-dropdown:hover .dropdown-arrow,
+.nav-dropdown.open .dropdown-arrow {
+    opacity: 1;
+}
+
+/* — Dropdown-menu: zachtere shadow + animatie — */
+.nav-links .dropdown-menu {
+    border-radius: 12px !important;
+    border: 1px solid rgba(15, 23, 42, 0.06) !important;
+    box-shadow: 0 10px 40px rgba(15, 23, 42, 0.12) !important;
+    padding: 0.4rem !important;
+    margin-top: 0.35rem;
+}
+.nav-links .dropdown-menu a {
+    padding: 0.6rem 0.9rem !important;
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: background-color .15s ease, color .15s ease, padding-left .18s ease;
+}
+.nav-links .dropdown-menu a:hover {
+    padding-left: 1.1rem !important;
+    background: #f0f6ff !important;
+    color: #0E2A4A !important;
+}
+
+/* — Logo: lichtere padding, soepelere hover — */
+.navbar-brand.logo-button {
+    padding: 6px 8px !important;
+    transition: opacity .2s ease;
+}
+.navbar-brand.logo-button:hover { opacity: 0.85; }
+
+/* — Mobile (<900px): houd onze polish, maar laat hamburger ongemoeid — */
+@media (max-width: 900px) {
+    .nav-links .nav-highlight a {
+        padding: 0.4rem 0.75rem !important;
+        font-size: 0.82rem;
+    }
+    .nav-links .nav-highlight .floating-label {
+        font-size: 0.55rem !important;
+        top: -6px !important;
+        right: -8px !important;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   17. FOOTER POLISH — compacter, eleganter, alle content behouden
+   Werkt op .footer__grid layout (37 pagina's met uitgebreide footer).
+   ───────────────────────────────────────────────────────────────────────── */
+
+footer {
+    background: linear-gradient(180deg, #1a1a1a 0%, #141414 100%) !important;
+    padding: 2.25rem var(--gutter, 1.5rem) 0 !important;
+    border-top: 1px solid rgba(26, 115, 232, 0.15);
+    position: relative;
+}
+/* Subtiele kleuraccent bovenaan footer */
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, #15375F 35%, #F26B1F 65%, transparent 100%);
+    opacity: 0.55;
+}
+
+/* Grid layout — werkt op zowel .footer__grid (BEM) als .footer-grid (streepje) */
+footer .footer__grid,
+footer .footer-grid {
+    display: grid !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: 1.6fr 1fr 1.5fr 1fr 1fr !important;
+    gap: 1.75rem !important;
+    padding-bottom: 1.5rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    align-items: start;
+}
+/* Pages met 4 kolommen (footer-grid streepje) — gebruik 4-koloms layout */
+footer .footer-grid {
+    grid-template-columns: 1.6fr 1fr 1.5fr 1fr !important;
+}
+@media (max-width: 1024px) {
+    footer .footer__grid,
+    footer .footer-grid { grid-template-columns: 1fr 1fr 1fr !important; }
+}
+@media (max-width: 720px) {
+    footer .footer__grid,
+    footer .footer-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 460px) {
+    footer .footer__grid,
+    footer .footer-grid { grid-template-columns: 1fr !important; gap: 1.25rem !important; }
+}
+
+/* Brand-kolom polish */
+footer .footer__brand h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.15rem !important;
+    color: #fff !important;
+}
+footer .footer__brand .tag {
+    font-size: 0.62rem !important;
+    letter-spacing: 0.32em !important;
+    color: #6b7280 !important;
+    margin-bottom: 0.85rem !important;
+}
+footer .footer__brand p {
+    font-size: 0.82rem !important;
+    line-height: 1.55 !important;
+    color: #9ca3af !important;
+    margin-bottom: 0.5rem !important;
+    max-width: 280px;
+}
+footer .footer__btw {
+    font-size: 0.7rem !important;
+    color: #6b7280 !important;
+    margin-top: 0.65rem !important;
+    letter-spacing: 0.02em;
+}
+
+/* Heading-styling: kleiner, hoofdletters, eyebrow-vibe */
+footer .footer__col h4,
+footer .footer-grid > div > h4 {
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #cbd5e1 !important;
+    margin-bottom: 0.85rem !important;
+    padding-bottom: 0.55rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+}
+footer .footer__col h4::after,
+footer .footer-grid > div > h4::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -1px;
+    width: 24px;
+    height: 1px;
+    background: #15375F;
+}
+
+/* Brand-kolom in footer-grid (streepje) — h4 staat als brand-titel,
+   maar zou zonder accentstreep en met groter font moeten zijn als brand-style */
+footer .footer-grid > div:first-child > h4 {
+    font-size: 1rem !important;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    color: #fff !important;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+footer .footer-grid > div:first-child > h4::after { display: none; }
+footer .footer-grid > div:first-child p {
+    font-size: 0.82rem !important;
+    color: #9ca3af !important;
+    line-height: 1.55 !important;
+    max-width: 280px;
+}
+
+/* Lijsten: tighter spacing, subtieler font (beide varianten) */
+footer .footer__col ul,
+footer .footer-grid > div > ul { line-height: 1.4; padding: 0; margin: 0; list-style: none; }
+footer .footer__col li,
+footer .footer-grid > div > ul > li {
+    margin-bottom: 0.32rem !important;
+    font-size: 0.83rem !important;
+    list-style: none;
+}
+footer .footer__col a,
+footer .footer-grid > div > ul > li > a,
+footer .footer-grid > div > ul > li > a:link {
+    color: #94a3b8 !important;
+    transition: color 0.15s ease, padding-left 0.18s ease !important;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.45;
+}
+footer .footer__col a:hover,
+footer .footer-grid > div > ul > li > a:hover {
+    color: #fff !important;
+    padding-left: 4px;
+}
+
+/* Werkgebied 2-koloms — compacter (beide varianten) */
+footer .footer__col ul[style*="column-count"],
+footer .footer-grid > div > ul[style*="column-count"] {
+    column-gap: 1rem !important;
+}
+footer .footer__col ul[style*="column-count"] li,
+footer .footer-grid > div > ul[style*="column-count"] li {
+    margin-bottom: 0.28rem !important;
+}
+
+/* Bottom-bar voor streepje-variant */
+footer .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0 1.25rem !important;
+    font-size: 0.75rem !important;
+    color: #6b7280 !important;
+    padding-right: max(0px, calc(220px + var(--gutter, 1rem))) !important;
+}
+@media (max-width: 760px) {
+    footer .footer-bottom { padding-right: 0 !important; }
+}
+footer .footer-bottom a { color: #9ca3af !important; transition: color 0.15s ease; }
+footer .footer-bottom a:hover { color: #fff !important; }
+
+/* Bottom-bar: kleinere padding, inline-element-aware */
+footer .footer__bottom {
+    padding: 1rem 0 1.25rem !important;
+    font-size: 0.75rem !important;
+    color: #6b7280 !important;
+    /* Reserveer ruimte rechts voor de 50% Korting fixed badge */
+    padding-right: max(0px, calc(220px + var(--gutter, 1rem))) !important;
+}
+@media (max-width: 760px) {
+    footer .footer__bottom { padding-right: 0 !important; }
+}
+footer .footer__bottom a { color: #9ca3af; }
+footer .footer__bottom a:hover { color: #fff; }
+
+/* Body-spacing onder fixed promo-badge: zodat copyright niet onder badge verdwijnt */
+body { padding-bottom: var(--footer-safe-bottom, 72px); }
+
+/* — Eenvoudige (compacte) footer-variant op contact/404/realisaties: ook polish — */
+footer:not(:has(.footer__grid)) {
+    text-align: center;
+    padding: 1.5rem var(--gutter, 1.5rem) !important;
+    font-size: 0.85rem;
+    line-height: 1.65;
+}
+footer:not(:has(.footer__grid)) p { margin: 0.25rem 0; }
+footer:not(:has(.footer__grid)) a {
+    color: #cbd5e1 !important;
+    transition: color 0.15s ease;
+}
+footer:not(:has(.footer__grid)) a:hover { color: #fff !important; }
+
+/* ─────────────────────────────────────────────────────────────────────────
+   18. FAQ POLISH — compacter, eleganter (globaal)
+   Werkt op alle service-pages met details.faq-item structuur.
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Compactere section-head boven FAQ */
+.faq-section .section-head { margin-bottom: 1.75rem !important; }
+.faq-section .section-head h2 {
+    font-size: clamp(1.4rem, 3vw, 1.85rem) !important;
+    margin-bottom: .35rem !important;
+}
+.faq-section .section-head .eyebrow {
+    font-size: 0.7rem !important;
+    margin-bottom: .35rem !important;
+}
+
+/* Lijst: tightere stack via gap */
+.faq-section .faq-list {
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+}
+
+/* Items: subtieler frame, hover-state, kleinere radius */
+details.faq-item {
+    background: #fff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    margin: 0 !important;
+    overflow: hidden;
+    transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+details.faq-item:hover {
+    border-color: #cbd5e1 !important;
+}
+details.faq-item[open] {
+    border-color: rgba(13, 71, 161, 0.25) !important;
+    box-shadow: 0 4px 14px rgba(13, 71, 161, 0.07);
+}
+
+/* Summary: compacter, betere typografie */
+details.faq-item summary {
+    padding: 0.85rem 1.05rem !important;
+    cursor: pointer;
+    font-weight: 600 !important;
+    font-size: 0.94rem !important;
+    color: #0F1722 !important;
+    list-style: none;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: color .15s ease;
+    position: relative;
+}
+details.faq-item summary:hover {
+    color: #0E2A4A !important;
+}
+details.faq-item summary::-webkit-details-marker { display: none; }
+details.faq-item summary::marker { content: ""; }
+
+/* Plus-teken: schoner, eleganter, sneller */
+details.faq-item summary::after {
+    content: '+' !important;
+    font-size: 1.25rem !important;
+    color: #0E2A4A !important;
+    transition: transform .28s cubic-bezier(.4,0,.2,1) !important;
+    flex-shrink: 0;
+    line-height: 1;
+    font-weight: 300;
+    width: 22px;
+    text-align: center;
+}
+details.faq-item[open] summary::after {
+    transform: rotate(45deg) !important;
+}
+
+/* Antwoord: smallere typografie, iets minder padding onder */
+details.faq-item p {
+    padding: 0 1.05rem 0.9rem !important;
+    color: #475569 !important;
+    font-size: 0.88rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/* Mobile: nog compacter */
+@media (max-width: 640px) {
+    details.faq-item summary {
+        padding: 0.75rem 0.95rem !important;
+        font-size: 0.9rem !important;
+    }
+    details.faq-item p {
+        padding: 0 0.95rem 0.8rem !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   19. SERVICE-HERO POLISH — overschrijft style.css grid + dikke padding
+   style.css regel 345 forceert: display:grid, padding:var(--space-2xl)
+   We overrulen globaal voor consistente, compacte hero op alle service-pages.
+   ───────────────────────────────────────────────────────────────────────── */
+section.service-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    grid-template-columns: none !important;
+    padding: 1.5rem 1rem !important;
+    text-align: center !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    min-height: 0 !important;
+    position: relative !important;
+    overflow: hidden;
+}
+section.service-hero > * {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
+    z-index: 1;
+}
+section.service-hero h1 {
+    color: #fff !important;
+    font-size: clamp(1.4rem, 3vw, 1.95rem) !important;
+    margin: 0 auto 0.45rem !important;
+    line-height: 1.15;
+    max-width: 540px !important;
+    text-shadow: 0 2px 24px rgba(0,0,0,.18);
+}
+section.service-hero .sub {
+    font-size: clamp(.85rem, 1.3vw, .94rem) !important;
+    color: rgba(255,255,255,.9) !important;
+    margin: 0 auto 0.8rem !important;
+    max-width: 480px !important;
+    line-height: 1.5;
+}
+section.service-hero .eyebrow {
+    display: inline-block !important;
+    background: rgba(255,255,255,.14) !important;
+    border: 1px solid rgba(255,255,255,.28);
+    color: #fff !important;
+    padding: 0.24rem 0.75rem !important;
+    border-radius: 999px !important;
+    font-size: 0.66rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: none !important;
+    margin: 0 auto 0.55rem !important;
+    width: auto !important;
+    backdrop-filter: blur(4px);
+}
+section.service-hero .hero-badges,
+section.service-hero .trust-bar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.32rem !important;
+    justify-content: center !important;
+    margin: 0 auto 0.75rem !important;
+    max-width: 540px !important;
+}
+section.service-hero .badge,
+section.service-hero .trust-bar span {
+    background: rgba(255,255,255,.10) !important;
+    border: 1px solid rgba(255,255,255,.22) !important;
+    color: #fff !important;
+    padding: 0.24rem 0.72rem !important;
+    border-radius: 50px !important;
+    font-size: 0.72rem !important;
+    font-weight: 500 !important;
+    backdrop-filter: blur(4px);
+}
+section.service-hero .cta-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+}
+section.service-hero .cta-row .btn {
+    min-width: 140px;
+    padding: 0.6rem 1.2rem !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 14px rgba(0,0,0,.18);
+}
+
+@media (max-width: 768px) {
+    /* Hero-CTA en hero-cta-group verbergen op mobiel (FAB-bar onderaan vervangt ze) */
+    section.service-hero .cta-row,
+    section.service-hero .hero-cta-group {
+        display: none !important;
+    }
+}
+@media (max-width: 640px) {
+    section.service-hero {
+        padding: 1.25rem 1rem 1.75rem !important;
+    }
+    section.service-hero h1 {
+        font-size: clamp(1.35rem, 5.5vw, 1.7rem) !important;
+    }
+}

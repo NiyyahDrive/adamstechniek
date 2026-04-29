@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="nl" class="no-js">
+<head>
+<meta charset="UTF-8">
+    <base href="https://adamstechniek.nl/pages/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lees de echte Google Reviews van Adams Daktechniek — 4.9/5 op 12 geverifieerde reviews. Ruitenwassen, zonnepanelen, dakgoten in Limburg. Vakmanschap zonder gezever.">
+    <title>Reviews - Adams Daktechniek | Wat klanten zeggen</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://adamstechniek.nl/assets/favicons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://adamstechniek.nl/assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://adamstechniek.nl/assets/favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://adamstechniek.nl/assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="https://adamstechniek.nl/assets/favicons/site.webmanifest">
+    <meta name="theme-color" content="#0d47a1">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q11L7Z055S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q11L7Z055S');
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Adams Daktechniek">
+    <meta property="og:title" content="Reviews – Adams Daktechniek">
+    <meta property="og:description" content="12 geverifieerde Google Reviews — gemiddeld 4.9/5. Ruitenwassen, zonnepanelen & dakgoten in Limburg.">
+    <meta property="og:image" content="../assets/images-optimized/adamslogo_en.jpeg">
+    <meta property="og:url" content="https://adamstechniek.nl/pages/reviews.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reviews – Adams Daktechniek">
+    <meta name="twitter:description" content="Wat zeggen onze klanten? Lees echte reviews over ruitenwassen en reiniging in Limburg.">
+    <meta name="twitter:image" content="../assets/images-optimized/adamslogo_en.jpeg">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://adamstechniek.nl/pages/reviews.html">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        /* ============================================
+           DESIGN TOKENS
+           ============================================ */
+        :root {
+            --color-primary:       #0d47a1;
+            --color-primary-light: #1a73e8;
+            --color-accent:        #FF6B35;
+            --color-accent-dark:   #E55A25;
+            --color-ink:           #0F1722;
+            --color-body:          #334155;
+            --color-muted:         #64748b;
+            --color-line:          #e2e8f0;
+            --color-soft:          #f8fafc;
+            --color-bg:            #ffffff;
+
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+
+            --shadow-sm: 0 1px 2px rgba(15,23,42,.06);
+            --shadow-md: 0 6px 18px rgba(15,23,42,.08);
+            --shadow-lg: 0 18px 40px rgba(15,23,42,.12);
+
+            --maxw:   1200px;
+            --gutter: clamp(1rem, 3vw, 2rem);
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: var(--font-sans);
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--color-body);
+            background: var(--color-bg);
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--color-primary-light); text-decoration: none; }
+        h1, h2, h3, h4 { color: var(--color-ink); line-height: 1.2; font-weight: 700; letter-spacing: -.01em; }
+        h2 { font-size: clamp(1.6rem, 3.2vw, 2.25rem); margin-bottom: .75rem; }
+        .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+        section { padding: clamp(3rem, 7vw, 6rem) 0; }
+
+        .section-head { text-align: center; max-width: 720px; margin: 0 auto 3rem; }
+        .section-head .eyebrow {
+            display: inline-block;
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--color-primary-light);
+            margin-bottom: .75rem;
+        }
+        .section-head p { color: var(--color-muted); margin: .75rem auto 0; }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255,255,255,.92);
+            backdrop-filter: saturate(180%) blur(12px);
+            -webkit-backdrop-filter: saturate(180%) blur(12px);
+            border-bottom: 1px solid var(--color-line);
+        }
+        .nav__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: .9rem var(--gutter);
+        }
+        .logo { flex-shrink: 0; display: block; line-height: 0; }
+        .logo img { height: 42px; width: auto; }
+
+        .nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
+        .nav-links a { color: var(--color-body); font-size: .95rem; font-weight: 500; transition: color .2s; }
+        .nav-links a:hover { color: var(--color-primary); }
+        .nav-links .btn-nav {
+            background: var(--color-primary);
+            color: #fff;
+            padding: .55rem 1.1rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+        }
+        .nav-links .btn-nav:hover { background: var(--color-ink); color: #fff; }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 28px; height: 20px;
+            background: none; border: none; cursor: pointer; padding: 0;
+        }
+        .hamburger span {
+            display: block; width: 100%; height: 2px;
+            background: var(--color-ink); border-radius: 2px;
+            transition: transform .3s, opacity .3s;
+        }
+        .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+        /* Acties highlight */
+        .nav-highlight a {
+            position: relative;
+            font-weight: 600;
+            color: white !important;
+            background: #F26B1F;
+            padding: .5rem 1rem;
+            border-radius: 6px;
+            animation: pulse-nav 2s ease-in-out infinite;
+        }
+        .nav-highlight a:hover { background: #e55a25; }
+        @keyframes pulse-nav {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255,107,53,.7); }
+            50%       { box-shadow: 0 0 0 8px rgba(255,107,53,0); }
+        }
+        .floating-label {
+            position: absolute; top: -14px; right: -28px;
+            background: #F26B1F; color: white;
+            font-size: .6rem; font-weight: 700;
+            padding: .25rem .5rem; border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 860px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                position: absolute; top: 100%; left: 0; right: 0;
+                flex-direction: column; align-items: stretch; gap: 0;
+                background: #fff; border-bottom: 1px solid var(--color-line);
+                padding: .5rem 0; box-shadow: var(--shadow-md);
+                transform: translateY(-10px); opacity: 0;
+                pointer-events: none; transition: opacity .2s, transform .2s;
+            }
+            .nav-links.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+            .nav-links li { border-bottom: 1px solid var(--color-line); }
+            .nav-links li:last-child { border-bottom: none; }
+            .nav-links a { display: block; padding: 1rem var(--gutter); font-size: 1rem; }
+            .nav-links .btn-nav { margin: .75rem var(--gutter); text-align: center; border-radius: var(--radius-sm); }
+            .nav-highlight a { display: flex; flex-direction: column; align-items: center; gap: .25rem; padding: .35rem .7rem; font-size: .85rem; }
+            .floating-label { position: static; font-size: .5rem; padding: .15rem .3rem; background: rgba(255,107,53,.9); border-radius: 8px; }
+        }
+
+        /* ============================================
+           HERO REVIEWS
+           ============================================ */
+        .reviews-hero {
+            background: linear-gradient(135deg, #0d47a1 0%, #1a73e8 100%);
+            color: #fff;
+            text-align: center;
+            padding: clamp(3.5rem, 8vw, 6rem) var(--gutter);
+        }
+        .reviews-hero .eyebrow {
+            display: inline-block;
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.25);
+            color: #fff;
+            padding: .35rem .9rem;
+            border-radius: 999px;
+            font-size: .75rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+        .reviews-hero h1 {
+            color: #fff;
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .reviews-hero p {
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            opacity: .9;
+            max-width: 580px;
+            margin: 0 auto 2rem;
+            line-height: 1.65;
+        }
+        .reviews-hero .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            background: rgba(255,255,255,.15);
+            border: 1px solid rgba(255,255,255,.3);
+            padding: .6rem 1.2rem;
+            border-radius: 999px;
+            font-size: .95rem;
+            font-weight: 500;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            padding: .85rem 1.8rem;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: transform .2s, background .2s, color .2s, box-shadow .2s;
+            white-space: nowrap;
+        }
+        .btn-google {
+            background: var(--color-primary);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(13,71,161,.35);
+        }
+        .btn-google:hover {
+            background: var(--color-ink);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(13,71,161,.4);
+        }
+        .btn-write {
+            background: var(--color-accent);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(255,107,53,.3);
+        }
+        .btn-write:hover {
+            background: var(--color-accent-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: #fff;
+            border-color: rgba(255,255,255,.7);
+        }
+        .btn-outline-white:hover {
+            background: rgba(255,255,255,.12);
+            color: #fff;
+            border-color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+           GOOGLE BUTTON SECTION
+           ============================================ */
+        .google-cta {
+            background: var(--color-soft);
+            padding: clamp(2rem, 4vw, 3rem) var(--gutter);
+            text-align: center;
+            border-bottom: 1px solid var(--color-line);
+        }
+        .google-cta p {
+            color: var(--color-muted);
+            font-size: .95rem;
+            margin: .75rem auto 1.75rem;
+            max-width: 520px;
+        }
+
+        /* ============================================
+           GOOGLE REVIEWS GRID
+           ============================================ */
+        .widget-section {
+            background: #f8fafc;
+            padding: clamp(3rem, 6vw, 5rem) 0;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+
+        @media (max-width: 900px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 560px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+        .review-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.4rem;
+            box-shadow: 0 2px 8px rgba(15,23,42,.05);
+            display: flex;
+            flex-direction: column;
+            gap: .75rem;
+            transition: box-shadow .2s ease, transform .2s ease;
+        }
+        .review-card:hover {
+            box-shadow: 0 8px 24px rgba(15,23,42,.1);
+            transform: translateY(-2px);
+        }
+
+        .review-card__header {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+        .review-card__avatar {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 1rem; color: #fff;
+            flex-shrink: 0;
+        }
+        .review-card__name { font-weight: 600; font-size: .95rem; color: #0F1722; }
+        .review-card__meta { font-size: .78rem; color: #94a3b8; margin-top: .1rem; }
+        .review-card__google { margin-left: auto; flex-shrink: 0; opacity: .85; }
+        .review-card__stars { color: #fbbc04; font-size: 1rem; letter-spacing: .05em; }
+        .review-card__text { font-size: .9rem; color: #475569; line-height: 1.6; margin: 0; }
+        .widget-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 var(--gutter);
+            /* Layout-fix: prevent text overflow on mobile */
+            flex: 1;
+            min-width: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+
+        /* ============================================
+           STATS SECTION
+           ============================================ */
+        .stats {
+            background: var(--color-primary);
+            padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+        }
+        .stats__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: clamp(1.5rem, 3vw, 2.5rem);
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .stats__item { color: #fff; }
+        .stats__number {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: .35rem;
+        }
+        .stats__label {
+            font-size: .9rem;
+            color: rgba(255,255,255,.75);
+            font-weight: 500;
+        }
+
+        @media (max-width: 640px) {
+            .stats__grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* ============================================
+           REVIEW SCHRIJVEN CTA
+           ============================================ */
+        .write-review {
+            background: var(--color-soft);
+            padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+        }
+        .write-review__inner {
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+            /* Layout-fix */
+            flex: 1;
+            min-width: 0;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .write-review__inner h2 { margin-bottom: 1rem; }
+        .write-review__inner p {
+            color: var(--color-muted);
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+        .write-review__actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            background: #111827;
+            color: #94a3b8;
+            font-size: .9rem;
+            padding: clamp(2.5rem, 5vw, 4rem) var(--gutter) 0;
+        }
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2.5rem;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding-bottom: 2.5rem;
+        }
+        .footer__brand h3 { color: #fff; font-size: 1.1rem; letter-spacing: .02em; }
+        .footer__brand .tag { font-size: .72rem; letter-spacing: .3em; color: var(--color-muted); margin-bottom: .75rem; }
+        .footer__brand p { font-size: .9rem; color: #94a3b8; max-width: 30ch; }
+        .footer__col h4 { color: #fff; font-size: .95rem; margin-bottom: .9rem; }
+        .footer__col ul { list-style: none; }
+        .footer__col li { margin-bottom: .45rem; font-size: .9rem; }
+        .footer__col a { color: #94a3b8; transition: color .2s; }
+        .footer__col a:hover { color: #fff; }
+        .footer__bottom {
+            border-top: 1px solid #0F1722;
+            padding: 1.25rem 0;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-size: .82rem;
+        }
+
+        @media (max-width: 900px) {
+            .footer__grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 520px) {
+            .footer__grid { grid-template-columns: 1fr; }
+            .footer__bottom { justify-content: center; text-align: center; }
+        }
+    
+    /* ── NAV DROPDOWN ── */
+    .nav-highlight a{position:relative;font-weight:600;color:#fff !important;background:#F26B1F;padding:.5rem 1rem;border-radius:6px;text-decoration:none;}
+    .floating-label{position:absolute;top:-14px;right:-28px;background:#F26B1F;color:#fff;font-size:.6rem;font-weight:700;padding:.25rem .5rem;border-radius:10px;white-space:nowrap;}
+    .dropdown-arrow{font-size:.65rem;transition:transform .2s;display:inline-block;}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown > a{display:flex;align-items:center;gap:.3rem;}
+    .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;background:#fff;border:1px solid #e2e8f0;border-radius:10px;box-shadow:0 8px 28px rgba(15,23,42,.13);min-width:230px;z-index:300;padding:.5rem 0;list-style:none;}
+    .nav-dropdown:hover > .dropdown-menu,.nav-dropdown.open > .dropdown-menu{display:block;}
+    .nav-dropdown:hover .dropdown-arrow,.nav-dropdown.open .dropdown-arrow{transform:rotate(180deg);}
+    .dropdown-menu li{list-style:none;}
+    .dropdown-menu a{display:block;padding:.65rem 1.25rem;color:#334155 !important;font-size:.9rem;font-weight:500;white-space:nowrap;text-decoration:none;background:transparent !important;transition:background .15s,color .15s;}
+    .dropdown-menu a:hover{background:#f0f6ff !important;color:#0d47a1 !important;}
+    @media(max-width:900px){.nav-dropdown .dropdown-menu{position:static;box-shadow:none;border:none;border-top:1px solid #e2e8f0;border-radius:0;background:#f8fafc;min-width:unset;padding:.25rem 0 .25rem 1rem;}}
+        .dropdown-menu::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 0;
+            right: 0;
+            height: 8px;
+        }
+    /* ── STICKY BAR + MOB FAB ── */
+    .sticky-call-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:#0d47a1;z-index:999;}
+    .sticky-call-bar a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:1rem;color:#fff;text-decoration:none;font-weight:600;}
+    .mob-fab-bar{display:none;}
+    @media(max-width:768px){
+        .mob-fab-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:1000;background:#0d1b2a;border-top:2px solid rgba(255,255,255,.1);box-shadow:0 -4px 20px rgba(0,0,0,.3);}
+        .mob-fab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.45rem .2rem .4rem;text-decoration:none;font-size:.62rem;font-weight:700;line-height:1.2;text-align:center;transition:opacity .15s;border-right:1px solid rgba(255,255,255,.08);min-height:58px;}
+        .mob-fab:last-child{border-right:none;}
+        .mob-fab:active{opacity:.75;}
+        .mob-fab__icon{font-size:1.3rem;margin-bottom:.15rem;display:block;}
+        .mob-fab__label{color:#fff;}
+        .mob-fab--offerte{background:#e65c00;}
+        .mob-fab--bel{background:#0d47a1;}
+        .mob-fab--wa{background:#25D366;}
+        .mob-fab--actie{background:#b71c1c;}
+        .sticky-call-bar{display:none !important;}
+        .float-wa{display:none !important;}
+        a[href*="wa.me"][style*="position:fixed"]{display:none !important;}
+        body{padding-bottom:72px !important;}
+    }
+    </style>
+
+    <!-- Mobile-First Responsive Header -->
+    <link rel="stylesheet" href="../css/header.css?v=7">
+    <link rel="stylesheet" href="../css/enhancements.css?v=20260429j">
+
+</head>
+<body>
+    <a href="#main" class="skip-link">Sla naar hoofdinhoud</a>
+
+
+    <!-- ========== NAVIGATION ========== -->
+    <header class="nav">
+        <div class="nav__inner">
+            <a href="../index.html" class="logo navbar-brand logo-button">
+                <img src="../assets/images-optimized/adamslogo_en.jpeg" alt="Adams Daktechniek" loading="eager">
+            </a>
+
+            <button class="hamburger" id="menuToggle" aria-label="Navigatiemenu openen" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links" id="navMenu">
+                <li class="nav-dropdown">
+                    <a href="../index.html#diensten">Diensten <span class="dropdown-arrow">&#9660;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ruitenwassen.html">Ruitenwassen</a></li>
+                        <li><a href="zonnepanelen-reinigen.html">Zonnepanelen reinigen</a></li>
+                        <li><a href="dakgoten-reinigen.html">Dakgoten reinigen</a></li>
+                        <li><a href="gevelreiniging.html">Gevelreiniging</a></li>
+                        <li><a href="dakontmossen.html">Dak ontmossen</a></li>
+                        <li><a href="terrasreiniging.html">Terrasreiniging</a></li>
+                        <li><a href="verandareiniging.html">Veranda reinigen</a></li>
+                        <li><a href="rolluiken-koepels.html">Rolluiken &amp; koepels</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#waarom">Waarom ons</a></li>
+                <li><a href="voor-syndici.html">Voor bedrijven</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li class="nav-highlight"><a href="onze-acties.html">Onze Acties <span class="floating-label">50% Korting</span></a></li>
+                <li><a href="realisaties.html">Realisaties</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="btn-nav">Gratis offerte</a></li>
+            </ul>
+        </div>
+    </header>
+    <div id="main" tabindex="-1" style="position:absolute;left:-1px;top:-1px;width:1px;height:1px;overflow:hidden;"></div>
+
+
+    <!-- ========== HERO ========== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb" style="background:#f8fafc;padding:.75rem clamp(1rem,3vw,2rem);font-size:.85rem;color:#64748b;">
+        <a href="../index.html" style="color:#0d47a1;text-decoration:none;">Home</a> &#x203A; <span>Reviews & Ervaringen</span>
+    </nav>
+    <section style="background:linear-gradient(135deg,rgba(11,61,145,0.83),rgba(26,115,232,0.73)),url('../assets/images-optimized/Ruitenwassen-3-1440w.webp') center/cover no-repeat;color:#fff;text-align:center;padding:clamp(3rem,8vw,5rem) clamp(1rem,3vw,2rem);display:block;">
+        <span style="display:block;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:.75rem;">&#11088; Wat klanten zeggen</span>
+        <h1 style="color:#fff;font-size:clamp(2rem,5vw,3rem);font-weight:700;margin-bottom:1rem;">Reviews & Ervaringen</h1>
+        <p style="font-size:clamp(1rem,2.5vw,1.2rem);color:rgba(255,255,255,.9);max-width:700px;margin:0 auto;">Meer dan 200 tevreden klanten in Antwerpen, Mechelen, Leuven en de Kempen. Lees wat zij zeggen over ons vakmanschap.</p>
+    </section>
+
+    <!-- ========== GOOGLE REVIEWS KNOP ========== -->
+    <div class="google-cta">
+        <p>Alle reviews staan rechtstreeks op Google — transparant en onbewerkt.</p>
+        <a href="https://www.google.com/maps/place/4+Seasons+Cleaning/@51.3953499,4.7946227,17z/data=!4m8!3m7!1s0x47c6a901d37a426f:0x2921944dc6823eb0!8m2!3d51.3953499!4d4.797203!9m1!1b1!16s%2Fg%2F11s4cvs9gs" target="_blank" rel="noopener noreferrer" class="btn btn-google">
+            ⭐ Bekijk al onze 5-sterren reviews op Google
+        </a>
+    </div>
+
+    <!-- ========== GOOGLE REVIEWS ========== -->
+    <section class="widget-section">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow">Verified Reviews</span>
+                <h2>Wat onze klanten zeggen</h2>
+                <p>12 beoordelingen · 5,0 gemiddeld · rechtstreeks van Google</p>
+            </div>
+
+            <div class="reviews-grid">
+
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar" style="background:#1a73e8;">P</div>
+                        <div>
+                            <div class="review-card__name">Philip Goedkoop</div>
+                            <div class="review-card__meta">Local Guide · 2 jaar geleden</div>
+                        </div>
+                        <img class="review-card__google" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">Een geweldige ervaring met een zeer professionele en eerlijke jongeman die gebruik maakt van state-of-the-art osmosetechnologie om een uitstekend resultaat te leveren. We hebben nu de schoonste ramen van de straat!</p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar" style="background:#34a853;">B</div>
+                        <div>
+                            <div class="review-card__name">Bert Bortier</div>
+                            <div class="review-card__meta">Local Guide · 11 maanden geleden</div>
+                        </div>
+                        <img class="review-card__google" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">Heel tevreden over de uitstekende en vriendelijke service van Nabil, die onze dakgoten, koepels en gevels heeft gereinigd. Aanrader!</p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar" style="background:#ea4335;">E</div>
+                        <div>
+                            <div class="review-card__name">Els Quirynen</div>
+                            <div class="review-card__meta">11 maanden geleden</div>
+                        </div>
+                        <img class="review-card__google" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">Wij zijn zeer tevreden over de vriendelijke en professionele service van Nabil. Hij komt al jaren onze ramen wassen en elke keer blinken ze weer als een spiegel. 😊</p>
+                </div>
+
+                <!-- Review 4 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar" style="background:#fbbc04; color:#333;">E</div>
+                        <div>
+                            <div class="review-card__name">Edwin Duijn</div>
+                            <div class="review-card__meta">11 maanden geleden</div>
+                        </div>
+                        <img class="review-card__google" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">Eindelijk een ruitenwasser die niet alleen de ramen maar ook de omlijstingen reinigt. Hij komt zijn afspraken altijd na! En zeer betaalbaar. Zeer blij mee.</p>
+                </div>
+
+                <!-- Review 5 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar" style="background:#9c27b0;">P</div>
+                        <div>
+                            <div class="review-card__name">Petra Couck</div>
+                            <div class="review-card__meta">3 jaar geleden</div>
+                        </div>
+                        <img class="review-card__google" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">Super tevreden! Wij hebben een oud huis met veel ruitjes… Nabil reinigt de ramen en omlijstingen zeer efficiënt. Zeer vriendelijk en betrouwbaar. Ik beveel hem ten zeerste aan.</p>
+                </div>
+
+                <!-- Review 6 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar" style="background:#0097a7;">L</div>
+                        <div>
+                            <div class="review-card__name">Lien Depondt</div>
+                            <div class="review-card__meta">3 jaar geleden</div>
+                        </div>
+                        <img class="review-card__google" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">Zeer vriendelijke en professionele service! Onze ramen waren niet gemakkelijk te reinigen, maar Nabil deed dit grondig en vakkundig. Zeker aan te bevelen!</p>
+                </div>
+
+                <!-- Review 7 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar" style="background:#e91e63;">T</div>
+                        <div>
+                            <div class="review-card__name">Thea Spanjers</div>
+                            <div class="review-card__meta">3 jaar geleden</div>
+                        </div>
+                        <img class="review-card__google" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">Uitstekende service, goede communicatie, de ramen blinken weer, aangenaam contact. Aanbevolen.</p>
+                </div>
+
+                <!-- Review 8 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar" style="background:#ff7043;">K</div>
+                        <div>
+                            <div class="review-card__name">Kim Vermeiren</div>
+                            <div class="review-card__meta">11 maanden geleden</div>
+                        </div>
+                        <img class="review-card__google" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">Een tevreden klant! Goede, vriendelijke service en ramen die weer prachtig blinken.</p>
+                </div>
+
+                <!-- Review 9 -->
+                <div class="review-card">
+                    <div class="review-card__header">
+                        <div class="review-card__avatar" style="background:#5c6bc0;">B</div>
+                        <div>
+                            <div class="review-card__name">Broes van Iterson</div>
+                            <div class="review-card__meta">3 jaar geleden</div>
+                        </div>
+                        <img class="review-card__google" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/24px-Google_%22G%22_logo.svg.png" alt="Google" width="20" height="20">
+                    </div>
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">Ik ben zeer tevreden, Nabil verwijderde zelfs de betonspatten van mijn ramen. Fantastisch!</p>
+                </div>
+
+            </div><!-- /.reviews-grid -->
+
+            <p style="text-align:center;font-size:.88rem;color:#64748b;margin:1.5rem 0 .5rem;">Onderstaande reviews zijn overgenomen van ons <strong>Google Bedrijfsprofiel</strong> (4.9/5 gemiddeld). Wij voegen nooit nep-reviews toe en nodigen elke klant na afloop persoonlijk uit om een eerlijke beoordeling achter te laten.</p>
+            <div style="text-align:center; margin-top:.75rem;">
+                <a href="https://www.google.com/maps/place/4+Seasons+Cleaning/@51.3953499,4.7946227,17z/data=!4m8!3m7!1s0x47c6a901d37a426f:0x2921944dc6823eb0!8m2!3d51.3953499!4d4.797203!9m1!1b1!16s%2Fg%2F11s4cvs9gs" target="_blank" rel="noopener noreferrer" class="btn btn-google">
+                    ⭐ Bekijk alle 12 reviews op Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STATISTIEKEN ========== -->
+    <section class="stats">
+        <div class="stats__grid">
+            <div class="stats__item">
+                <div class="stats__number">200+</div>
+                <div class="stats__label">Opdrachten uitgevoerd</div>
+            </div>
+            <div class="stats__item">
+                <div class="stats__number">15+</div>
+                <div class="stats__label">Jaar ervaring</div>
+            </div>
+            <div class="stats__item">
+                <div class="stats__number">4.9<span style="font-size:1.25rem;">/5</span></div>
+                <div class="stats__label">Gemiddelde review</div>
+            </div>
+            <div class="stats__item">
+                <div class="stats__number">24u</div>
+                <div class="stats__label">Offerte binnen</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== REVIEW SCHRIJVEN CTA ========== -->
+    <section class="write-review">
+        <div class="write-review__inner">
+            <h2>Tevreden over ons werk?</h2>
+            <p>Laat een review achter op Google en help ons groeien. Jouw feedback is goud waard — voor ons team én voor nieuwe klanten die een betrouwbare vakman zoeken.</p>
+            <div class="write-review__actions">
+                <a href="https://www.google.com/maps/place/4+Seasons+Cleaning/@51.3953499,4.7946227,17z/data=!4m8!3m7!1s0x47c6a901d37a426f:0x2921944dc6823eb0!8m2!3d51.3953499!4d4.797203!9m1!1b1!16s%2Fg%2F11s4cvs9gs" target="_blank" rel="noopener noreferrer" class="btn btn-google">
+                    ⭐ Schrijf een Google Review
+                </a>
+                <a href="contact.html" class="btn btn-write">
+                    Gratis offerte aanvragen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+        <footer>
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <h3>ADAMS</h3>
+                <div class="tag">WINDOW CLEANING</div>
+                <p>Professionele ruitenwasser en totaalreiniging in Limburg. Osmose-technologie, vakmanschap, nuchterheid.</p>
+                <p class="footer__btw">BTW BE 0785.659.715</p>
+            </div>
+            <div class="footer__col">
+                <h4>Diensten</h4>
+                <ul>
+                    <li><a href="ruitenwassen.html">Ruitenwassen</a></li>
+                    <li><a href="zonnepanelen-reinigen.html">Zonnepanelen reinigen</a></li>
+                    <li><a href="dakgoten-reinigen.html">Dakgoten reinigen</a></li>
+                    <li><a href="gevelreiniging.html">Gevelreiniging</a></li>
+                    <li><a href="dakontmossen.html">Dak ontmossen</a></li>
+                    <li><a href="terrasreiniging.html">Terrasreiniging</a></li>
+                    <li><a href="verandareiniging.html">Veranda reinigen</a></li>
+                    <li><a href="rolluiken-koepels.html">Rolluiken &amp; koepels</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Bedrijf</h4>
+                <ul>
+                    <li><a href="over-ons.html">Over ons</a></li>
+                    <li><a href="realisaties.html">Realisaties</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="voor-syndici.html">Voor bedrijven</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+31683396082">06-83 33 96 082</a></li>
+                    <li><a href="https://wa.me/31683396082" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li><a href="mailto:info@adamstechniek.nl">info@adamstechniek.nl</a></li>
+                    <li><a href="https://www.google.com/maps/place/4+Seasons+Cleaning/@51.3953499,4.7946227,17z/data=!4m8!3m7!1s0x47c6a901d37a426f:0x2921944dc6823eb0!8m2!3d51.3953499!4d4.797203!9m1!1b1!16s%2Fg%2F11s4cvs9gs" target="_blank" rel="noopener">⭐ Google Reviews</a></li>
+                    <li>Ma–Za 8:00 – 20:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span>© 2026 Adams Daktechniek. Alle rechten voorbehouden.</span>
+            <span><a href="privacy.html">Privacybeleid</a> · <a href="terms.html">Algemene voorwaarden</a> · <a href="sitemap.html">Sitemap</a></span>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp CTA -->
+    <a target="_blank" rel="noopener noreferrer"
+       href="https://wa.me/31683396082?text=Hallo+Adams+Daktechniek+-+ik+las+jullie+reviews+en+wil+een+offerte"
+       class="float-wa"
+       style="position:fixed;bottom:90px;right:1.25rem;width:56px;height:56px;background:#25D366;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:89;text-decoration:none;transition:transform .2s ease;"
+       aria-label="Chat via WhatsApp" title="Chat op WhatsApp">💬</a>
+    <script src="https://adamstechniek.nl/js/main.js?v=20260429c"></script>
+    <div class="mob-fab-bar" id="mobFabBar">
+        <a href="contact.html" class="mob-fab mob-fab--offerte">
+            <span class="mob-fab__icon">📋</span>
+            <span class="mob-fab__label">Offerte</span>
+        </a>
+        <a href="tel:+31683396082" class="mob-fab mob-fab--bel">
+            <span class="mob-fab__icon">📞</span>
+            <span class="mob-fab__label">Bellen</span>
+        </a>
+        <a href="https://wa.me/31683396082?text=Hallo+Adams+Daktechniek+-+ik+las+jullie+reviews+en+wil+een+offerte" target="_blank" rel="noopener" class="mob-fab mob-fab--wa">
+            <span class="mob-fab__icon">💬</span>
+            <span class="mob-fab__label">WhatsApp</span>
+        </a>
+        <a href="onze-acties.html" class="mob-fab mob-fab--actie">
+            <span class="mob-fab__icon">🏷️</span>
+            <span class="mob-fab__label">50% Korting<br>Nieuwe Klanten</span>
+        </a>
+    </div>
+<script>
+(function() {
+    document.querySelectorAll('.nav-dropdown').forEach(function(dd) {
+        var t;
+        dd.addEventListener('mouseenter', function() {
+            clearTimeout(t);
+            if (window.matchMedia('(hover: hover)').matches) {
+                dd.classList.add('open');
+            }
+        });
+        dd.addEventListener('mouseleave', function() {
+            t = setTimeout(function() { dd.classList.remove('open'); }, 200);
+        });
+        var link = dd.querySelector(':scope > a');
+        if (link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    dd.classList.toggle('open');
+                }
+            });
+        }
+    });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-dropdown')) {
+            document.querySelectorAll('.nav-dropdown.open').forEach(function(dd) {
+                dd.classList.remove('open');
+            });
+        }
+    });
+})();
+</script>
+    <script src="https://adamstechniek.nl/js/enhancements.js" defer></script>
+    <script src="https://adamstechniek.nl/js/events.js?v=20260429j" defer></script>
+
+</body>
+</html>
