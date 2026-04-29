@@ -86,9 +86,24 @@ p{margin:0 0 1em}
 .brand-mark svg{width:22px;height:22px}
 .brand-name{font-size:16px;letter-spacing:.02em}
 .brand-name small{display:block;font-weight:500;font-size:11px;color:#bcd0e6;letter-spacing:.12em;text-transform:uppercase}
-.nav-links{display:none;gap:22px}
-.nav-links a{color:#dfe7f1;font-weight:600;font-size:14px;transition:color .2s}
+.nav-links{display:none;gap:22px;list-style:none;padding:0;margin:0;align-items:center;}
+.nav-links > li{position:relative;}
+.nav-links a{color:#dfe7f1;font-weight:600;font-size:14px;transition:color .2s;display:inline-flex;align-items:center;gap:6px;padding:10px 0;}
 .nav-links a:hover{color:#fff}
+.nav-dropdown > a::after{content:"";display:inline-block;width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-left:4px;margin-bottom:2px;transition:transform .2s;}
+.nav-dropdown:hover > a::after,.nav-dropdown.open > a::after{transform:rotate(225deg);margin-bottom:-2px;}
+.nav-dropdown__menu{
+  position:absolute;top:100%;left:-12px;min-width:260px;
+  background:var(--navy-2);border:1px solid rgba(255,255,255,.08);border-radius:12px;
+  padding:8px;list-style:none;margin:0;
+  display:none;flex-direction:column;gap:2px;
+  box-shadow:0 24px 60px rgba(0,0,0,.45);z-index:60;
+}
+.nav-dropdown:hover .nav-dropdown__menu,.nav-dropdown.open .nav-dropdown__menu{display:flex;}
+.nav-dropdown__menu a{padding:10px 12px;border-radius:8px;font-size:13.5px;color:#dfe7f1;}
+.nav-dropdown__menu a:hover{background:rgba(255,255,255,.06);color:#fff;}
+.nav-dropdown__menu .featured{background:rgba(242,107,31,.12);color:var(--orange-2);}
+.nav-dropdown__menu .featured:hover{background:rgba(242,107,31,.18);color:#fff;}
 .nav-cta{
   background:var(--orange);color:#fff;padding:10px 14px;border-radius:10px;
   font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:8px;
@@ -198,6 +213,7 @@ p{margin:0 0 1em}
 .svc{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;
   transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  display:block;color:var(--ink);text-decoration:none;cursor:pointer;
 }
 .svc:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:rgba(14,42,74,.18)}
 .svc-icon{
@@ -407,22 +423,53 @@ details.faq p{margin-top:10px;color:var(--muted)}
       </span>
       <span class="brand-name">Adams Daktechniek<small>Dakdekker · Heerlen</small></span>
     </a>
-    <nav class="nav-links" aria-label="Hoofdmenu">
-      <a href="#diensten">Diensten</a>
-      <a href="#inspectie">Inspectie</a>
-      <a href="#waarom">Waarom Adams</a>
-      <a href="#proces">Werkwijze</a>
-      <a href="#projecten">Projecten</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <ul class="nav-links" aria-label="Hoofdmenu">
+      <li class="nav-dropdown" id="ddDiensten">
+        <a href="#diensten">Diensten</a>
+        <ul class="nav-dropdown__menu" role="menu">
+          <li><a class="featured" href="pages/dakinspectie.html">Gratis dakinspectie</a></li>
+          <li><a href="pages/platte-daken.html">Platte daken</a></li>
+          <li><a href="pages/hellende-daken.html">Hellende daken</a></li>
+          <li><a href="pages/dakkapellen.html">Dakkapellen</a></li>
+          <li><a href="pages/zinkwerk.html">Zinkwerk &amp; loodwerk</a></li>
+          <li><a href="pages/spoed-lekkage.html">Spoed &amp; lekkages</a></li>
+          <li><a href="pages/dakraam-velux.html">Dakraam &amp; Velux</a></li>
+          <li><a href="pages/dakisolatie.html">Dakisolatie</a></li>
+          <li><a href="pages/dakonderhoud.html">Onderhoud &amp; inspectie</a></li>
+          <li><a href="pages/renovatie-verbouw.html">Renovatie &amp; verbouw</a></li>
+          <li><a href="pages/nokvorsten.html">Nokvorsten</a></li>
+          <li><a href="pages/schoorstenen.html">Schoorstenen</a></li>
+          <li><a href="pages/vogelwering.html">Vogelwering</a></li>
+          <li><a href="pages/dakreiniging.html">Dakreiniging &amp; ontmossing</a></li>
+        </ul>
+      </li>
+      <li><a href="#inspectie">Inspectie</a></li>
+      <li><a href="#waarom">Waarom Adams</a></li>
+      <li><a href="#proces">Werkwijze</a></li>
+      <li><a href="#projecten">Projecten</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
     <a class="nav-cta" href="tel:0683396082" aria-label="Bel direct">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <span>06-83396082</span>
     </a>
     <button class="menu-btn" aria-expanded="false" aria-controls="drawer" id="menuBtn">Menu</button>
     <div class="nav-drawer" id="drawer" role="menu">
-      <a href="#diensten">Diensten</a>
-      <a href="#waarom">Waarom Adams</a>
+      <a href="pages/dakinspectie.html" style="color:#FF8A3D;font-weight:700;">★ Gratis dakinspectie</a>
+      <a href="pages/platte-daken.html">Platte daken</a>
+      <a href="pages/hellende-daken.html">Hellende daken</a>
+      <a href="pages/dakkapellen.html">Dakkapellen</a>
+      <a href="pages/zinkwerk.html">Zinkwerk &amp; loodwerk</a>
+      <a href="pages/spoed-lekkage.html">Spoed &amp; lekkages</a>
+      <a href="pages/dakraam-velux.html">Dakraam &amp; Velux</a>
+      <a href="pages/dakisolatie.html">Dakisolatie</a>
+      <a href="pages/dakonderhoud.html">Onderhoud &amp; inspectie</a>
+      <a href="pages/renovatie-verbouw.html">Renovatie &amp; verbouw</a>
+      <a href="pages/nokvorsten.html">Nokvorsten</a>
+      <a href="pages/schoorstenen.html">Schoorstenen</a>
+      <a href="pages/vogelwering.html">Vogelwering</a>
+      <a href="pages/dakreiniging.html">Dakreiniging &amp; ontmossing</a>
+      <a href="#waarom" style="border-top:1px solid rgba(255,255,255,.10);margin-top:4px;padding-top:14px;">Waarom Adams</a>
       <a href="#proces">Werkwijze</a>
       <a href="#projecten">Projecten</a>
       <a href="#contact">Contact</a>
@@ -605,96 +652,96 @@ details.faq p{margin-top:10px;color:var(--muted)}
     </div>
     <div class="services">
 
-      <article class="svc">
+      <a class="svc" href="pages/platte-daken.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7l9-5 9 5v10l-9 5-9-5V7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
         <h3>Platte daken</h3>
         <p>Bitumen en EPDM. Aanleg, vervanging en lekdetectie. Strakke aansluitingen die jaren meegaan.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/hellende-daken.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12l9-8 9 8M5 10v10h14V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Hellende daken</h3>
         <p>Pannendaken, dakvervanging en isolatie. Onder elke pan: zorgvuldig vakwerk.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/dakkapellen.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 21V8l9-5 9 5v13M9 21v-7h6v7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
         <h3>Dakkapellen</h3>
         <p>Meer ruimte en licht op zolder. Op maat geplaatst, netjes afgewerkt en goed geïsoleerd.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/zinkwerk.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 17l6-6 4 4 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 5h6v6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Zinkwerk & loodwerk</h3>
         <p>Goten, kilgoten, daktrimmen en aansluitingen. Strak, lekvrij en voor de lange termijn.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/spoed-lekkage.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
         <h3>Spoed & lekkages</h3>
         <p>Lekkage in huis? Bel direct. We komen snel ter plaatse en stoppen het probleem bij de bron.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/dakraam-velux.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 9h18M9 3v18" stroke="currentColor" stroke-width="2"/></svg></div>
         <h3>Dakraam & Velux</h3>
         <p>Plaatsing en vervanging van dakramen. Daglicht en ventilatie zonder gedoe.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/dakisolatie.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
         <h3>Dakisolatie</h3>
         <p>Dak- en zolderisolatie. Lager energieverbruik, comfortabeler huis.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/dakonderhoud.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
         <h3>Onderhoud & inspectie</h3>
         <p>Jaarlijkse check, goten reinigen en kleine reparaties. Voorkom grote kosten later.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/renovatie-verbouw.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 21V10l8-6 8 6v11" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 21v-6h6v6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
         <h3>Renovatie & verbouw</h3>
         <p>Aanbouw, opbouw en verbouwingen rondom je dak. Eén partij voor je hele klus.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/nokvorsten.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12l2-2 4 4 8-8 4 4M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Nokvorsten</h3>
         <p>Vervanging en herzetten van nokvorsten. Voorkomt indringend water bij wind en regen.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/schoorstenen.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M9 22V12h6v10M5 22V8l7-5 7 5v14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 6h3v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
         <h3>Schoorstenen</h3>
         <p>Renovatie, voegwerk en loodslabben rond schoorstenen. Lekvrij en wind-bestendig.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/vogelwering.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M2 12c4-4 8-4 10 0s6 4 10 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 18c4-4 8-4 10 0s6 4 10 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg></div>
         <h3>Vogelwering</h3>
         <p>Stop duiven en spreeuwen onder dakpannen. Subtiele wering, geen schade aan dak.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
-      <article class="svc">
+      <a class="svc" href="pages/dakreiniging.html">
         <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12l9-8 9 8M5 10v10h14V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
         <h3>Dakreiniging & ontmossing</h3>
         <p>Mos en algen aantasten dakpannen. Voorzichtig verwijderen + preventieve behandeling. Dak gaat jaren langer mee.</p>
         <span class="svc-arrow">Meer info →</span>
-      </article>
+      </a>
 
     </div>
   </div>
