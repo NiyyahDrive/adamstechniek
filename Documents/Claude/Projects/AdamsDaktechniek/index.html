@@ -1161,6 +1161,30 @@ details.faq p{margin-top:10px;color:var(--muted)}
     }
   });
 
+  // DESKTOP DROPDOWN — toggle on click (works for touch + mouse)
+  document.querySelectorAll('.nav-dropdown').forEach(dd => {
+    const trigger = dd.querySelector(':scope > a');
+    if (!trigger) return;
+    trigger.addEventListener('click', e => {
+      // On hover-capable devices the menu opens via :hover. On touch/click toggle .open.
+      if (window.matchMedia('(hover: none)').matches || window.innerWidth <= 820) {
+        e.preventDefault();
+      } else {
+        // On desktop also toggle, but allow shift/cmd-click to follow link
+        if (!e.metaKey && !e.shiftKey && !e.ctrlKey) {
+          e.preventDefault();
+        }
+      }
+      dd.classList.toggle('open');
+    });
+  });
+  // Close dropdowns on click outside
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-dropdown')) {
+      document.querySelectorAll('.nav-dropdown.open').forEach(dd => dd.classList.remove('open'));
+    }
+  });
+
   document.getElementById('contactForm').addEventListener('submit', function(e){
     e.preventDefault();
     const f = e.target;

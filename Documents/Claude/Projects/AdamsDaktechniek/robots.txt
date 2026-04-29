@@ -1,16 +1,4 @@
 User-agent: *
 Allow: /
 
-# Blokkeer admin/server-side files
-Disallow: /logs/
-Disallow: /lib/
-Disallow: /pages/contact.php
-Disallow: /contact.php
-Disallow: /mail_config.php
-Disallow: /*.backup-*
-Disallow: /*.bak$
-Disallow: /*.old$
-Disallow: /_backups/
-
-# Sitemap
 Sitemap: https://adamstechniek.nl/sitemap.xml
