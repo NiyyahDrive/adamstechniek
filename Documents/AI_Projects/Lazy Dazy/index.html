@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0f3a4a" />
+<meta name="description" content="LazyDaysy — uw was, onze zorg. Wij halen op, wassen, drogen en bezorgen vandaag nog. Eén afspraak, één dag, één zorg minder." />
+<title>LazyDaysy — Uw was, onze zorg.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  /* ---------- Design tokens ---------- */
+  :root {
+    --ink: #0f3a4a;          /* deep teal navy */
+    --ink-2: #143f51;
+    --paper: #f7f3ec;        /* warm cream */
+    --paper-2: #efe9df;
+    --sand: #e9dfd0;
+    --mist: #d8e6e7;
+    --accent: #2f8f8a;       /* fresh teal */
+    --accent-soft: #b8dcd8;
+    --gold: #c8965a;         /* warm premium accent */
+    --line: rgba(15, 58, 74, 0.12);
+    --shadow-sm: 0 4px 16px rgba(15, 58, 74, 0.06);
+    --shadow-md: 0 12px 40px rgba(15, 58, 74, 0.10);
+    --shadow-lg: 0 24px 60px rgba(15, 58, 74, 0.14);
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 32px;
+    --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+    --container: 1200px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; margin: 0; }
+  h1 { font-size: clamp(2.4rem, 7vw, 4.6rem); }
+  h2 { font-size: clamp(1.9rem, 4.5vw, 3rem); }
+  h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
+  p { margin: 0; }
+  a { color: inherit; text-decoration: none; }
+
+  .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 20px; }
+  @media (min-width: 768px) { .container { padding: 0 32px; } }
+
+  /* ---------- Nav ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    background: rgba(247, 243, 236, 0.78);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 0;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .logo-mark {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--accent-soft), var(--accent));
+    box-shadow: inset 0 -6px 12px rgba(15, 58, 74, 0.15), 0 4px 10px rgba(47, 143, 138, 0.25);
+    position: relative; flex-shrink: 0;
+  }
+  .logo-mark::after {
+    content: ""; position: absolute; inset: 7px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.6), transparent 60%);
+  }
+  .nav-links { display: none; gap: 28px; font-size: 0.93rem; font-weight: 500; }
+  .nav-links a { opacity: 0.75; transition: opacity 0.2s var(--ease); }
+  .nav-links a:hover { opacity: 1; }
+  @media (min-width: 900px) { .nav-links { display: flex; } }
+  .nav-cta { display: none; }
+  @media (min-width: 900px) { .nav-cta { display: inline-flex; } }
+  .menu-btn {
+    width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%;
+    background: transparent; cursor: pointer; display: grid; place-items: center;
+  }
+  @media (min-width: 900px) { .menu-btn { display: none; } }
+  .menu-btn span {
+    display: block; width: 16px; height: 1.5px; background: var(--ink);
+    position: relative;
+  }
+  .menu-btn span::before, .menu-btn span::after {
+    content: ""; position: absolute; left: 0; right: 0; height: 1.5px; background: var(--ink);
+  }
+  .menu-btn span::before { top: -5px; }
+  .menu-btn span::after { top: 5px; }
+
+  /* Mobile menu */
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 40;
+    background: var(--paper);
+    transform: translateY(-100%);
+    transition: transform 0.4s var(--ease);
+    padding: 100px 24px 40px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .mobile-menu.open { transform: translateY(0); }
+  .mobile-menu a {
+    font-family: 'Fraunces', serif; font-size: 2rem; padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 14px 22px; border-radius: 999px;
+    font-size: 0.95rem; font-weight: 500; cursor: pointer;
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--ink); color: var(--paper);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); background: var(--ink-2); }
+  .btn-ghost {
+    background: transparent; color: var(--ink); border-color: var(--line);
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .btn-accent {
+    background: var(--accent); color: white;
+  }
+  .btn-accent:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); background: #267874; }
+
+  .btn .arrow { display: inline-block; transition: transform 0.3s var(--ease); }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    padding: 60px 0 80px;
+    overflow: hidden;
+  }
+  @media (min-width: 900px) { .hero { padding: 80px 0 120px; } }
+
+  .hero-grid {
+    display: grid; gap: 48px;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  @media (min-width: 900px) {
+    .hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 64px; }
+  }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.82rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--accent);
+    padding: 7px 14px; border-radius: 999px;
+    background: rgba(47, 143, 138, 0.1);
+    margin-bottom: 24px;
+  }
+  .eyebrow .dot {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  .hero h1 em {
+    font-style: italic; font-weight: 400; color: var(--accent);
+  }
+  .hero-lead {
+    margin-top: 24px; font-size: clamp(1.05rem, 1.4vw, 1.18rem);
+    color: rgba(15, 58, 74, 0.75); max-width: 540px;
+  }
+  .hero-cta { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-meta {
+    margin-top: 40px; display: flex; flex-wrap: wrap; gap: 24px 32px;
+    font-size: 0.88rem; color: rgba(15, 58, 74, 0.7);
+  }
+  .hero-meta div { display: flex; align-items: center; gap: 8px; }
+  .hero-meta svg { flex-shrink: 0; }
+
+  /* Hero visual */
+  .hero-visual {
+    position: relative; aspect-ratio: 4/5;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(160deg, var(--mist) 0%, var(--paper-2) 60%, var(--sand) 100%);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-visual::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 75% 20%, rgba(47, 143, 138, 0.18), transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(200, 150, 90, 0.15), transparent 50%);
+  }
+  .hero-visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+  .floating-card {
+    position: absolute; background: var(--paper);
+    border-radius: var(--radius-md); padding: 14px 18px;
+    box-shadow: var(--shadow-md);
+    display: flex; align-items: center; gap: 12px;
+    font-size: 0.88rem; font-weight: 500;
+  }
+  .floating-card.fc-1 {
+    top: 8%; left: -16px;
+    animation: float 6s ease-in-out infinite;
+  }
+  .floating-card.fc-2 {
+    bottom: 10%; right: -16px;
+    animation: float 6s ease-in-out infinite 3s;
+  }
+  @media (min-width: 900px) {
+    .floating-card.fc-1 { left: -28px; }
+    .floating-card.fc-2 { right: -28px; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .fc-icon {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--accent-soft); display: grid; place-items: center;
+    color: var(--accent);
+  }
+  .fc-icon.gold { background: rgba(200, 150, 90, 0.2); color: var(--gold); }
+
+  /* ---------- Sections ---------- */
+  section { padding: 80px 0; }
+  @media (min-width: 900px) { section { padding: 120px 0; } }
+
+  .section-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+  .section-head .eyebrow { margin-bottom: 20px; }
+  .section-head p { margin-top: 18px; color: rgba(15, 58, 74, 0.7); font-size: 1.05rem; }
+
+  /* ---------- How it works ---------- */
+  .how {
+    background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+    position: relative;
+  }
+  .steps {
+    display: grid; gap: 20px;
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+  @media (min-width: 768px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 28px; } }
+
+  .step {
+    background: var(--paper);
+    border-radius: var(--radius-md);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--line);
+    position: relative;
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  }
+  .step:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+  .step-num {
+    font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 400; line-height: 1;
+    color: var(--accent); opacity: 0.35;
+    font-style: italic;
+  }
+  .step h3 { margin-top: 12px; }
+  .step p { margin-top: 10px; color: rgba(15, 58, 74, 0.72); font-size: 0.95rem; }
+  .step-icon {
+    margin-top: 24px; width: 48px; height: 48px; border-radius: 14px;
+    background: var(--accent-soft); color: var(--accent);
+    display: grid; place-items: center;
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid {
+    display: grid; gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .service {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    transition: all 0.35s var(--ease);
+    position: relative;
+    overflow: hidden;
+  }
+  .service::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--ink) 100%);
+    opacity: 0; transition: opacity 0.4s var(--ease);
+    z-index: 0;
+  }
+  .service > * { position: relative; z-index: 1; }
+  .service:hover { transform: translateY(-4px); border-color: transparent; }
+  .service:hover::before { opacity: 1; }
+  .service:hover, .service:hover h3, .service:hover p { color: var(--paper); }
+  .service:hover .service-icon { background: rgba(255, 255, 255, 0.15); color: var(--paper); }
+
+  .service-icon {
+    width: 52px; height: 52px; border-radius: 16px;
+    background: var(--sand); color: var(--ink);
+    display: grid; place-items: center;
+    margin-bottom: 18px;
+    transition: all 0.35s var(--ease);
+  }
+  .service h3 { font-size: 1.25rem; }
+  .service p { margin-top: 10px; font-size: 0.93rem; color: rgba(15, 58, 74, 0.7); transition: color 0.35s var(--ease); }
+
+  /* ---------- Promise / why ---------- */
+  .promise {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: var(--radius-lg);
+    padding: 56px 28px;
+    margin: 0 20px;
+    position: relative; overflow: hidden;
+  }
+  @media (min-width: 768px) { .promise { padding: 80px 64px; margin: 0 auto; max-width: 1140px; } }
+  .promise::before {
+    content: ""; position: absolute; top: -120px; right: -120px;
+    width: 360px; height: 360px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(47, 143, 138, 0.4), transparent 70%);
+  }
+  .promise::after {
+    content: ""; position: absolute; bottom: -100px; left: -80px;
+    width: 280px; height: 280px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200, 150, 90, 0.2), transparent 70%);
+  }
+  .promise-inner { position: relative; z-index: 1; }
+  .promise h2 { color: var(--paper); }
+  .promise h2 em { color: var(--accent-soft); font-style: italic; font-weight: 400; }
+  .promise-grid {
+    margin-top: 48px;
+    display: grid; gap: 28px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) { .promise-grid { grid-template-columns: repeat(3, 1fr); } }
+  .promise-item h4 {
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 1.05rem;
+    color: var(--accent-soft);
+  }
+  .promise-item p { margin-top: 10px; color: rgba(247, 243, 236, 0.75); font-size: 0.95rem; }
+  .promise-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12);
+    display: grid; place-items: center; margin-bottom: 16px;
+    color: var(--accent-soft);
+  }
+
+  /* ---------- Pricing ---------- */
+  .pricing-grid {
+    display: grid; gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 900px) { .pricing-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .plan {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 36px 30px;
+    position: relative;
+    transition: all 0.4s var(--ease);
+  }
+  .plan:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+  .plan-tag {
+    display: inline-block; font-size: 0.78rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--accent); margin-bottom: 16px;
+  }
+  .plan h3 { font-size: 1.5rem; }
+  .plan-price {
+    font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 500;
+    margin-top: 18px; line-height: 1;
+  }
+  .plan-price small { font-size: 1rem; font-weight: 400; opacity: 0.6; }
+  .plan ul {
+    list-style: none; padding: 0; margin: 28px 0 32px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .plan li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 0.93rem; color: rgba(15, 58, 74, 0.8);
+  }
+  .plan li svg { flex-shrink: 0; margin-top: 3px; color: var(--accent); }
+  .plan.featured {
+    background: var(--ink); color: var(--paper);
+    border-color: var(--ink);
+  }
+  .plan.featured h3, .plan.featured .plan-price { color: var(--paper); }
+  .plan.featured li { color: rgba(247, 243, 236, 0.85); }
+  .plan.featured li svg { color: var(--accent-soft); }
+  .plan.featured .plan-tag { color: var(--gold); }
+  .plan-badge {
+    position: absolute; top: 18px; right: 18px;
+    background: var(--gold); color: white;
+    padding: 5px 12px; border-radius: 999px;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq {
+    background: var(--paper-2);
+  }
+  .faq-grid {
+    display: grid; gap: 48px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 900px) { .faq-grid { grid-template-columns: 1fr 1.4fr; gap: 80px; } }
+  .faq-intro h2 { text-align: left; }
+  .faq-intro p { margin-top: 18px; color: rgba(15, 58, 74, 0.7); }
+
+  .faq-list { display: flex; flex-direction: column; gap: 12px; }
+  .faq-item {
+    background: var(--paper);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    transition: box-shadow 0.3s var(--ease);
+  }
+  .faq-item[open] { box-shadow: var(--shadow-sm); }
+  .faq-item summary {
+    padding: 20px 22px; cursor: pointer;
+    font-weight: 500; font-size: 1rem;
+    display: flex; justify-content: space-between; align-items: center;
+    list-style: none;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: ""; width: 12px; height: 12px;
+    border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink);
+    transform: rotate(45deg); transition: transform 0.3s var(--ease);
+    margin-left: 14px; flex-shrink: 0;
+  }
+  .faq-item[open] summary::after { transform: rotate(-135deg); }
+  .faq-body { padding: 0 22px 22px; color: rgba(15, 58, 74, 0.72); font-size: 0.95rem; }
+
+  /* ---------- CTA ---------- */
+  .cta-block {
+    text-align: center;
+    padding: 100px 20px;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(47, 143, 138, 0.12), transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(200, 150, 90, 0.1), transparent 50%),
+      var(--paper);
+  }
+  .cta-block h2 em { color: var(--accent); font-style: italic; font-weight: 400; }
+  .cta-block p { margin-top: 18px; max-width: 540px; margin-left: auto; margin-right: auto; color: rgba(15, 58, 74, 0.7); }
+  .cta-block .btn { margin-top: 36px; padding: 18px 36px; font-size: 1rem; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--ink); color: var(--paper);
+    padding: 60px 0 30px;
+  }
+  .footer-grid {
+    display: grid; gap: 40px;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; } }
+  .footer h4 {
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.85rem;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--accent-soft); margin-bottom: 16px;
+  }
+  .footer ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .footer a { opacity: 0.7; transition: opacity 0.2s var(--ease); font-size: 0.93rem; }
+  .footer a:hover { opacity: 1; }
+  .footer p { color: rgba(247, 243, 236, 0.7); font-size: 0.93rem; margin-top: 14px; max-width: 320px; }
+  .footer-bottom {
+    margin-top: 50px; padding-top: 24px;
+    border-top: 1px solid rgba(247, 243, 236, 0.12);
+    display: flex; flex-wrap: wrap; gap: 16px;
+    justify-content: space-between; align-items: center;
+    font-size: 0.83rem; opacity: 0.6;
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark"></span>
+      LazyDaysy
+    </a>
+    <div class="nav-links">
+      <a href="#hoe">Hoe het werkt</a>
+      <a href="#services">Services</a>
+      <a href="#prijzen">Prijzen</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#boeken" class="btn btn-primary nav-cta">Plan ophaling <span class="arrow">→</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu openen"><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hoe" data-close>Hoe het werkt</a>
+  <a href="#services" data-close>Services</a>
+  <a href="#prijzen" data-close>Prijzen</a>
+  <a href="#faq" data-close>FAQ</a>
+  <a href="#boeken" data-close>Plan ophaling →</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <span class="eyebrow"><span class="dot"></span> Same-day in Amsterdam &amp; omgeving</span>
+        <h1>Uw was, <em>onze zorg.</em><br/>Vandaag schoon terug.</h1>
+        <p class="hero-lead">
+          Wij halen uw was op, wassen en drogen met zorg, vouwen het netjes op
+          en bezorgen het dezelfde dag weer thuis. Eén afspraak, één dag, één zorg minder.
+        </p>
+        <div class="hero-cta">
+          <a href="#boeken" class="btn btn-primary">Plan ophaling <span class="arrow">→</span></a>
+          <a href="#hoe" class="btn btn-ghost">Hoe het werkt</a>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="10"/></svg>
+            Ophaal &amp; retour binnen 24u
+          </div>
+          <div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            Eco wasmiddelen
+          </div>
+          <div>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            100% zorggarantie
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- background subtle pattern -->
+          <defs>
+            <linearGradient id="basket" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f7f3ec"/>
+              <stop offset="1" stop-color="#e9dfd0"/>
+            </linearGradient>
+            <linearGradient id="towel1" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#2f8f8a"/>
+              <stop offset="1" stop-color="#b8dcd8"/>
+            </linearGradient>
+            <linearGradient id="towel2" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#c8965a"/>
+              <stop offset="1" stop-color="#e9dfd0"/>
+            </linearGradient>
+          </defs>
+
+          <!-- soft bubbles -->
+          <circle cx="80" cy="80" r="40" fill="#ffffff" opacity="0.5"/>
+          <circle cx="320" cy="120" r="22" fill="#ffffff" opacity="0.4"/>
+          <circle cx="340" cy="380" r="34" fill="#ffffff" opacity="0.5"/>
+          <circle cx="60" cy="420" r="18" fill="#ffffff" opacity="0.4"/>
+
+          <!-- stacked folded towels -->
+          <g transform="translate(110 200)">
+            <rect x="0" y="0" width="180" height="40" rx="6" fill="url(#towel1)"/>
+            <rect x="0" y="46" width="180" height="40" rx="6" fill="#0f3a4a" opacity="0.85"/>
+            <rect x="0" y="92" width="180" height="40" rx="6" fill="url(#towel2)"/>
+            <rect x="0" y="138" width="180" height="40" rx="6" fill="#f7f3ec" stroke="#0f3a4a" stroke-opacity="0.1"/>
+            <!-- highlights -->
+            <line x1="10" y1="8" x2="170" y2="8" stroke="#fff" stroke-opacity="0.4" stroke-width="2"/>
+            <line x1="10" y1="100" x2="170" y2="100" stroke="#fff" stroke-opacity="0.4" stroke-width="2"/>
+          </g>
+
+          <!-- hanging shirt silhouette -->
+          <g transform="translate(60 60)" opacity="0.85">
+            <path d="M0 30 L20 10 L30 10 Q40 25 50 10 L60 10 L80 30 L70 40 L70 90 L10 90 L10 40 Z" fill="#0f3a4a" opacity="0.12"/>
+          </g>
+
+          <!-- folded label tag -->
+          <g transform="translate(260 80)">
+            <rect x="0" y="0" width="80" height="34" rx="6" fill="#0f3a4a"/>
+            <text x="40" y="22" text-anchor="middle" fill="#f7f3ec" font-family="Fraunces, serif" font-size="14" font-style="italic">fresh</text>
+          </g>
+        </svg>
+
+        <div class="floating-card fc-1">
+          <div class="fc-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div>
+            <div style="font-size:0.76rem; opacity:0.6; font-weight:400;">Vandaag</div>
+            Opgehaald om 9:00
+          </div>
+        </div>
+        <div class="floating-card fc-2">
+          <div class="fc-icon gold">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg>
+          </div>
+          <div>
+            <div style="font-size:0.76rem; opacity:0.6; font-weight:400;">Klantbeoordeling</div>
+            4,9 / 5 — 312 reviews
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="hoe" class="how">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Hoe het werkt</span>
+      <h2>Drie stappen. Eén dag.</h2>
+      <p>Geen wachtrijen, geen gesleep. U boekt, wij regelen de rest.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <h3>Plan online</h3>
+        <p>Kies een ophaaltijdslot via onze app of website. Klaar in onder 60 seconden.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13l4 4v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="7" cy="19" r="2"/><circle cx="17" cy="19" r="2"/></svg>
+        </div>
+        <h3>Wij halen op</h3>
+        <p>Onze koerier staat op de afgesproken tijd voor uw deur. Geen wachten, geen gedoe.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>Schoon terug</h3>
+        <p>Dezelfde dag schoon, vers en gevouwen bij u terug. U hoeft alleen open te doen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Services</span>
+      <h2>Voor elk kledingstuk de juiste zorg.</h2>
+      <p>Van uw dagelijkse was tot delicate stoffen die extra aandacht verdienen.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service reveal">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="7" cy="7" r="1" fill="currentColor"/></svg>
+        </div>
+        <h3>Wekelijkse was</h3>
+        <p>Uw vaste was — gewassen, gedroogd en gevouwen op uw ritme. Vast tijdslot mogelijk.</p>
+      </div>
+      <div class="service reveal">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M8 14v6h8v-6"/></svg>
+        </div>
+        <h3>Delicate stoffen</h3>
+        <p>Zijde, kasjmier, wol. Lage temperatuur, milde producten, met de hand gecontroleerd.</p>
+      </div>
+      <div class="service reveal">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 9h20l-2 12H4z"/><path d="M6 9V6a6 6 0 1 1 12 0v3"/></svg>
+        </div>
+        <h3>Beddengoed &amp; handdoeken</h3>
+        <p>Diepe reiniging, hygiënisch gedroogd, strak opgevouwen. Klaar voor opnieuw gebruik.</p>
+      </div>
+      <div class="service reveal">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M5 9l7-7 7 7"/></svg>
+        </div>
+        <h3>Strijken &amp; afwerken</h3>
+        <p>Overhemden, blouses, broeken. Professioneel gestreken en op hanger geleverd.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMISE ===== -->
+<section style="padding: 40px 0 80px;">
+  <div class="promise reveal">
+    <div class="promise-inner">
+      <div style="max-width: 580px;">
+        <span class="eyebrow" style="background: rgba(184, 220, 216, 0.15); color: var(--accent-soft);">Onze belofte</span>
+        <h2 style="margin-top: 18px;">Gemak zonder <em>concessies.</em></h2>
+        <p style="margin-top: 18px; color: rgba(247, 243, 236, 0.78); font-size: 1.05rem;">
+          We behandelen elk kledingstuk alsof het van onszelf is. Met oog voor detail,
+          en respect voor uw tijd. Dat is geen marketing — dat is hoe we werken.
+        </p>
+      </div>
+
+      <div class="promise-grid">
+        <div class="promise-item">
+          <div class="promise-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+          </div>
+          <h4>Persoonlijke aandacht</h4>
+          <p>Geen anonieme rekken. Uw kleding krijgt aandacht van begin tot eind.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 7 6 11 6 15a6 6 0 0 0 12 0c0-4-2-8-6-13z"/></svg>
+          </div>
+          <h4>Milieubewust</h4>
+          <p>Plantaardige wasmiddelen, energie-efficiënte machines, herbruikbare zakken.</p>
+        </div>
+        <div class="promise-item">
+          <div class="promise-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg>
+          </div>
+          <h4>Op tijd, elke keer</h4>
+          <p>Te laat? Dan is de wasbeurt op ons. Klare belofte, klare voorwaarden.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section id="prijzen" class="how">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Prijzen</span>
+      <h2>Eerlijk geprijsd. Geen verrassingen.</h2>
+      <p>Kies wat past. Stoppen, pauzeren of upgraden kan altijd.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="plan reveal">
+        <span class="plan-tag">Los</span>
+        <h3>Single Load</h3>
+        <div class="plan-price">€24,<small>95</small></div>
+        <p style="margin-top: 6px; color: rgba(15, 58, 74, 0.6); font-size: 0.9rem;">per ophaling tot 8 kg</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Ophalen + bezorgen</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Wassen, drogen, vouwen</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Same-day terug</li>
+        </ul>
+        <a href="#boeken" class="btn btn-ghost" style="width: 100%;">Plan eenmalige was</a>
+      </div>
+
+      <div class="plan featured reveal">
+        <span class="plan-badge">Populair</span>
+        <span class="plan-tag">Wekelijks</span>
+        <h3>Weekly Care</h3>
+        <div class="plan-price">€19,<small>95</small></div>
+        <p style="margin-top: 6px; color: rgba(247, 243, 236, 0.6); font-size: 0.9rem;">per beurt — vast tijdslot</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Alles in Single Load</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Vast wekelijks tijdslot</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 20% korting op extra's</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Pauzeer wanneer u wilt</li>
+        </ul>
+        <a href="#boeken" class="btn btn-accent" style="width: 100%;">Start abonnement</a>
+      </div>
+
+      <div class="plan reveal">
+        <span class="plan-tag">Premium</span>
+        <h3>Full Care</h3>
+        <div class="plan-price">€39,<small>95</small></div>
+        <p style="margin-top: 6px; color: rgba(15, 58, 74, 0.6); font-size: 0.9rem;">per ophaling incl. strijken</p>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Alles in Weekly Care</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Professioneel strijken</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Op hanger geleverd</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Delicate stoffen inbegrepen</li>
+        </ul>
+        <a href="#boeken" class="btn btn-ghost" style="width: 100%;">Kies Full Care</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="faq-intro reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2 style="margin-top: 18px;">Antwoord op wat u zich afvraagt.</h2>
+        <p>Staat uw vraag er niet bij? Stuur ons een berichtje — we reageren binnen een paar uur.</p>
+        <a href="#boeken" class="btn btn-primary" style="margin-top: 28px;">Stel uw vraag <span class="arrow">→</span></a>
+      </div>
+
+      <div class="faq-list reveal">
+        <details class="faq-item" open>
+          <summary>Hoe snel krijg ik mijn was terug?</summary>
+          <div class="faq-body">
+            Halen we vóór 10:00 op, dan staat alles dezelfde dag voor 19:00 weer schoon, droog en gevouwen voor uw deur. Bij latere ophaling de volgende werkdag.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Welke wasmiddelen gebruiken jullie?</summary>
+          <div class="faq-body">
+            Standaard plantaardige, hypoallergene wasmiddelen. Gebruikt u liever uw eigen product? Geef het mee bij de ophaling — we gebruiken het exclusief voor uw was.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Wat als er iets beschadigd raakt?</summary>
+          <div class="faq-body">
+            Onze zorggarantie dekt schade tot tien keer de wasprijs per beurt. Bij twijfel: stuur foto's en we lossen het binnen 48 uur op.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Moet ik thuis zijn voor ophaling?</summary>
+          <div class="faq-body">
+            Niet per se. Veel klanten gebruiken een sleutelkluis of laten de waszak voor de deur. U kiest wat voor u werkt.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>In welk gebied zijn jullie actief?</summary>
+          <div class="faq-body">
+            Op dit moment Amsterdam en directe randgemeenten. Geef uw postcode bij het boeken — u krijgt direct te zien of we komen.
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="boeken" class="cta-block reveal">
+  <div class="container">
+    <span class="eyebrow">Klaar om te starten?</span>
+    <h2 style="margin-top: 18px;">Eén afspraak, één dag,<br/><em>één zorg minder.</em></h2>
+    <p>Plan nu uw eerste ophaling. Geen abonnement nodig, geen verplichtingen.</p>
+    <a href="mailto:hallo@lazydaysy.nl" class="btn btn-primary">Plan ophaling <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="logo" style="color: var(--paper);">
+          <span class="logo-mark"></span>
+          LazyDaysy
+        </a>
+        <p>Professionele wasservice aan huis. Uw was, onze zorg. Vandaag nog schoon en fris terug.</p>
+      </div>
+      <div>
+        <h4>Service</h4>
+        <ul>
+          <li><a href="#hoe">Hoe het werkt</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#prijzen">Prijzen</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bedrijf</h4>
+        <ul>
+          <li><a href="#">Over ons</a></li>
+          <li><a href="#">Werkgebied</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Werken bij</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hallo@lazydaysy.nl">hallo@lazydaysy.nl</a></li>
+          <li><a href="tel:+31000000000">+31 (0)20 000 0000</a></li>
+          <li><a href="#">Amsterdam &amp; omgeving</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 LazyDaysy. Alle rechten voorbehouden.</span>
+      <span><a href="#">Privacy</a> · <a href="#">Algemene voorwaarden</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('[data-close]').forEach(a =>
+    a.addEventListener('click', () => mobileMenu.classList.remove('open'))
+  );
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
